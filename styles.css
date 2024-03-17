@@ -48,7 +48,7 @@ html{
     color: transparent; /* Fallback for non-webkit browsers */
     text-align: center;
     font-size: 45px;
-    letter-spacing: -0.080em;
+    letter-spacing: -0.060em;
 }
 
 #bot_bio{
