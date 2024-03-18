@@ -20,7 +20,7 @@ html{
 
 /* - - - - - - - - - - - - - - - -  HEADING - - - - - - - - - - - - - - - - */
 #headingg {
-    margin-top: 100px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column; /* Stacks flex items vertically */
     /* justify-content: center; Centers content vertically within the container */
@@ -38,7 +38,6 @@ html{
     margin-top: 40px;
     margin-bottom: 60px;
 }
-
 #bot_name {
     background: linear-gradient(-45deg,#757575, #ffffff);
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -51,51 +50,6 @@ html{
     letter-spacing: -0.060em;
 }
 
-#bot_bio{
-    font-size: 22px;
-    padding: 20px;
-    box-shadow: 0px 0px 30px 0px rgba(56, 56, 56, 0.6);
-    border-left: 2px solid #ff0000;
-    border-right: 2px solid #ff0000;
-}
-
-
-
-
-
-
-
-
-
-
-/* - - - - - - - - - - - - - - - -  INVITE BOT - - - - - - - - - - - - - - - - */
-#invite-bot {
-    background: linear-gradient(-45deg,#000000, #170000);
-    border: none; /* Remove default border */
-    border-radius: 6px;
-    height: 60px;
-    width: 180px;
-    font-weight: 600;
-    color: white; /* Text color */
-    font-size: 16px;
-    cursor: pointer; /* Change mouse cursor to indicate button */
-    outline: none;
-    box-shadow: 0px 0px 10px 0px rgba(192, 165, 255, 0.6);
-    transition: box-shadow 0.2s ease, transform 0.3s ease;
-    margin: 20px;
-}
-
-/* Hover effect to slightly change the gradient */
-#invite-bot:hover {
-    box-shadow: 0px 0px 9px 1px rgba(255, 255, 255, 0.6);
-}
-
-
-
-
-
-
-
 
 
 
@@ -104,7 +58,7 @@ html{
 /* - - - - - - - - - - - - - - - -  SUPPORT - - - - - - - - - - - - - - - - */
 #support {
     display: flex;
-    margin-top: 150px;
+    margin-top: 10px;
     flex-direction: column; /* Stacks flex items vertically */
     background: linear-gradient(-90deg,#000000,#050505, #181818);
     justify-content: center;
@@ -159,69 +113,43 @@ color: white; /* Text color */
 
 
 
-
-
-
-
-
-/* - - - - - - - - - - - - - - - -  features - - - - - - - - - - - - - - - - */
-
-#features {
-    display: flex;
-    flex-wrap: wrap; /* Allow flex items to wrap onto multiple lines */
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    /* max-width: 800px; */
-}
-
-#ai, #simple, #stable {
-    text-align: center;
-    width: 600px;
-    height: 400px;
-}
-#f-heading{
-    font-size: 27px;
-    font-weight: 600;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-#f-desc{
-    padding: 20px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-
-
-
-
-
-
-/* - - - - - - - - - - - - - - - -  footer - - - - - - - - - - - - - - - - */
-
-#footer{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap; /* Allow flex items to wrap onto multiple lines */
-    justify-content: center;
-    align-items: center;
-    /* margin-left: auto;
-    margin-right: auto; */
-    /* max-width: auto; */
-    text-align: center;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 13px;
-    /* background: black; */
-}
-
-
 hr {
     height: 2px;
     background-color: #373737;
     border: none;
 }
-#tos-pp {
-    color: #ffffff; /* Change to your desired text color */
-    text-decoration: none; /* Remove the underline */
+#tos{
+    display: flex;
+    margin-top: 40px;
+    flex-direction: column; /* Stacks flex items vertically */
+    justify-content: center;
+    align-items: center;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#tos-heading {
+    background: linear-gradient(-45deg,#addaff, #686868);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Fallback for non-webkit browsers */
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: -0.100em;
+}
+#tos-welcome{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+#tos-text{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: left;
+    font-size: 17px;
+    padding: 30px;
+    max-width: 900px;
 }
