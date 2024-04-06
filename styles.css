@@ -9,8 +9,10 @@ body {
     color: white;
 }
 
-
-.logo{
+html{
+    scrollbar-width: none;
+}
+#logo{
     max-width: 700px;
     max-height: 700px;
     margin: 20px;
@@ -18,7 +20,11 @@ body {
 
   /* - - - - - - - - - - - - - - - -  HEADING - - - - - - - - - - - - - - - - */
 #headingg {
-
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  
     display: flex;
     flex-direction: column; /* Stacks flex items vertically */
     align-items: center;
@@ -28,7 +34,7 @@ body {
 }
 
   
-  #bot_name {
+#bot_name {
     background: linear-gradient(-45deg,#757575, #ffffff);
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     -webkit-background-clip: text;
@@ -38,8 +44,19 @@ body {
     text-align: center;
     font-size: 45px;
     letter-spacing: -0.060em;
-  }
+}
   
+
+
+
+#bio{
+    max-width: 800px;
+    display: flex;
+    flex-direction: column; /* Stacks flex items vertically */
+    align-items: center;
+    margin-left: auto; /* Centers the container horizontally */
+    margin-right: auto; /* Centers the container horizontally */
+}
   #bot_bio{
     font-size: 22px;
     padding: 20px;
@@ -409,36 +426,58 @@ body {
   
   
   
-  
+
+
   
   
   /* - - - - - - - - - - - - - - - -  features - - - - - - - - - - - - - - - - */
   
-  #features {
+#features {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+#features-heading{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+#features-list{
     display: flex;
     flex-wrap: wrap; /* Allow flex items to wrap onto multiple lines */
     justify-content: center;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    /* max-width: 800px; */
-  }
-  
-  #ai, #simple, #stable {
+
+}
+
+#ai, #simple, #stable {
     text-align: center;
     width: 600px;
     height: 400px;
-  }
-  #f-heading{
+}
+
+
+#f-heading{
     font-size: 27px;
     font-weight: 600;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
   
-  #f-desc{
+#f-desc{
     padding: 20px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
+}
   
   
   
