@@ -437,6 +437,7 @@ html{
     left: 0;
     width: 100vw;
     height: 100vh; */
+    width: auto;
     margin-top: 50px;
     align-items: center;
     display: flex;
@@ -454,6 +455,7 @@ html{
 
 #features-list{
     display: flex;
+    /* max-width: 400px; */
     flex-wrap: wrap; /* Allow flex items to wrap onto multiple lines */
     justify-content: center;
     align-items: center;
@@ -464,7 +466,7 @@ html{
 
 #ai, #simple, #stable {
     text-align: center;
-    width: 600px;
+    max-width: 600px;
     height: 400px;
 }
 
