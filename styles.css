@@ -433,10 +433,11 @@ html{
   /* - - - - - - - - - - - - - - - -  features - - - - - - - - - - - - - - - - */
   
 #features {
-    top: 0;
+    /* top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100vh; */
+    margin-top: 50px;
     align-items: center;
     display: flex;
     flex-flow: column;
