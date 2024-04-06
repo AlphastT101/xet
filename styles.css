@@ -13,8 +13,9 @@ body {
 .logo{
     max-width: 700px;
     max-height: 700px;
+    margin: 20px;
 }
-  
+
   /* - - - - - - - - - - - - - - - -  HEADING - - - - - - - - - - - - - - - - */
 #headingg {
 
@@ -118,7 +119,11 @@ body {
   .camera.o-y {
     transform: rotateY(-30deg);
   }
-  
+
+.camera.o-x{
+    transform: rotateX(6deg);
+}
+
   .vr {
     position: absolute;
     top: 50%;
