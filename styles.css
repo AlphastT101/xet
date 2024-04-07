@@ -20,10 +20,10 @@ html{
 
   /* - - - - - - - - - - - - - - - -  HEADING - - - - - - - - - - - - - - - - */
 #headingg {
-    top: 0;
+    /* top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100vh; */
   
     display: flex;
     flex-direction: column; /* Stacks flex items vertically */
@@ -42,8 +42,8 @@ html{
     background-clip: text;
     color: transparent; /* Fallback for non-webkit browsers */
     text-align: center;
-    font-size: 60px;
-    letter-spacing: -0.100em;
+    font-size: 43px;
+    letter-spacing: -0.060em;
 }
   
 
@@ -57,9 +57,9 @@ html{
     margin-right: auto;
 } */
 #bot_bio{
-    font-size: 19px;
+    font-size: 17px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 20px;
+    /* padding: 20px; */
 
     /* box-shadow: 0px 0px 30px 0px rgba(56, 56, 56, 0.6);
     border-left: 2px solid #ff0000;
@@ -439,6 +439,7 @@ html{
     left: 0;
     width: 100vw;
     height: 100vh; */
+    margin-bottom: 160px;
     width: auto;
     margin-top: 50px;
     align-items: center;
@@ -448,28 +449,29 @@ html{
 }
 
 #features-heading{
-    text-align: center;
-    font-size: 40px;
-    font-weight: 600;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
 #features-list{
-    display: flex;
-    /* max-width: 400px; */
-    flex-wrap: wrap; /* Allow flex items to wrap onto multiple lines */
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
+  margin-top: 50px;
+  display: flex;
+  /* max-width: 400px; */
+  flex-wrap: wrap; /* Allow flex items to wrap onto multiple lines */
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 
 #ai, #simple, #stable {
     text-align: center;
-    max-width: 600px;
-    height: 400px;
+    max-width: 550px;
+    height: auto;
 }
 
 
