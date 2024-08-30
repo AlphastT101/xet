@@ -1,0 +1,228 @@
+@keyframes borderColorAnimation {
+    0% {
+        border-color: #1a1aff; /* Dark blue */
+    }
+    50% {
+        border-color: #ff1a1a; /* Red */
+    }
+    100% {
+        border-color: #1a1aff; /* Dark blue */
+    }
+}
+
+@keyframes fadee {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}  
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Dark theme background */
+    -ms-overflow-style: none;  /* IE and Edge */
+}
+body::-webkit-scrollbar {display: none;}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out, visibility 1s ease-in-out;
+    animation-name: fadee;
+    animation-duration: 2s;
+    visibility: hidden;
+}
+
+/* Base button style */
+.discord-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #000000;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #ffffff, #e0e0e0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background 0.5s ease, transform 0.4s ease;
+}
+
+/* Hover effect */
+.discord-btn:hover {
+    background: linear-gradient(45deg, #ffffff, #b0b0b0);
+    transform: scale(1.05);
+}
+
+/* Active effect */
+.discord-btn:active {
+    background: linear-gradient(45deg, #ffffff, #808080);
+    transform: scale(0.95);
+}
+
+
+
+.home video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the container without distortion */
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Place video behind content */
+}
+
+.home-content {
+    position: relative;
+    z-index: 1;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.XET {
+    display: inline-block;
+    background: linear-gradient(to right, #b2aff0, #532a64);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.home-desc {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.features {
+    display: flex;
+    flex-direction: column; /* Stack the heading and feature items vertically */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 20px;
+    background: linear-gradient(180deg, #000000 , #1e1143); /* Dark gradient background */
+
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out, visibility 1s ease-in-out;
+    animation-name: fadee;
+    animation-duration: 2s;
+    visibility: hidden;
+}
+
+.features-heading {
+    text-align: center;
+    color: #e0e0e0;
+}
+
+.f {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+
+.feature-item {
+    background: linear-gradient(200deg, #171717, #100924);
+    border-radius: 8px;
+    padding: 20px;
+    /* width: calc(33.333% - 20px); */
+    max-width: 360px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #e0e0e0;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid;
+    animation: borderColorAnimation 5s linear infinite; /* Apply the border color animation */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.feature-item:hover {
+    transform: scale(1.02); /* Zoom in slightly */
+}
+
+.feature-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 1rem;
+    font-family: 'Roboto Mono', monospace;
+}
+
+
+
+
+
+.footer {
+    background-color: #000000; /* Ensure consistent background color */
+    text-align: center;
+    color: white;
+    padding: 50px;
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row; /* Align children in a row by default */
+    justify-content: space-between; /* Space out items */
+    width: 100%; /* Full width to allow flex items to grow */
+    max-width: 1200px; /* Optional: to control the maximum width of the content */
+    margin-bottom: 10px; /* Space between footer-content and arr */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.fcc {
+    flex: 1; /* Allow items to grow and fill available space */
+    margin: 0 20px; /* Space between items */
+    max-width: 200px; /* Optional: control max width for each section */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+.arr {
+    text-align: center;
+}
+
+/* Style for links */
+.footer a {
+    color: #b3ceff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    color: #ddd;
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center-align items horizontally */
+    }
+
+    .fcc {
+        margin: 10px 0; /* Adjust margin for vertical spacing */
+        max-width: none; /* Remove max-width to allow items to use full width */
+    }
+}
