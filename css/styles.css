@@ -3,7 +3,7 @@
         border-color: #1a1aff; /* Dark blue */
     }
     50% {
-        border-color: #ff1a1a; /* Red */
+        border-color: #871616; /* Red */
     }
     100% {
         border-color: #1a1aff; /* Dark blue */
@@ -14,6 +14,9 @@
     0% {opacity: 0;}
     100% {opacity: 1;}
 }  
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -117,7 +120,8 @@ body::-webkit-scrollbar {display: none;}
     gap: 20px;
     padding: 40px 20px;
     background: linear-gradient(180deg, #000000 , #1e1143); /* Dark gradient background */
-
+    min-height: 100vh; /* Ensure it takes up at least the full viewport height */
+    
     opacity: 0;
     transition: opacity 0.7s ease-in-out, visibility 1s ease-in-out;
     animation-name: fadee;
@@ -140,22 +144,22 @@ body::-webkit-scrollbar {display: none;}
 }
 
 .feature-item {
-    background: linear-gradient(200deg, #171717, #100924);
-    border-radius: 8px;
+    border-radius: 15px;
     padding: 20px;
-    /* width: calc(33.333% - 20px); */
     max-width: 360px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     color: #e0e0e0;
     text-align: center;
     box-sizing: border-box;
-    border: 1px solid;
-    animation: borderColorAnimation 5s linear infinite; /* Apply the border color animation */
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #27152f; /* Initial background color */
 }
+
 .feature-item:hover {
     transform: scale(1.02); /* Zoom in slightly */
+    background-color: #1e1143; /* Lighten background */
+    box-shadow: 0 8px 16px rgba(166, 132, 204, 0.5);
 }
+
 
 .feature-item h3 {
     font-size: 1.5rem;

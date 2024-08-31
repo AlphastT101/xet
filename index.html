@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XET</title>
-    <link rel="stylesheet" href="/css/styles.css">
+
     <link rel="stylesheet" href="/css/loader.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap">
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"> -->
 
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-duotone-solid.css">
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css">
 </head>
 <body>
-    <div class="home">
+    <div class="home" id="home">
         <video id="background-video" autoplay muted loop>
             <source id="video-source" src="" type="video/mp4">
             Your browser does not support the video tag.
@@ -29,33 +29,39 @@
             <a href="https://discord.com/invite/hmMBe8YyJ4" class="discord-btn" target="_blank" rel="noopener noreferrer">Join Discord</a>
         </div>
     </div>
-    <div class="features">
+    <div class="features" id="features">
         <div class="features-heading"><h1><i class="fa-duotone fa-solid fa-stars fa-flip" style="--fa-animation-duration: 3s;"></i> <a class="XET" style="font-size: 35px;">XET</a> Features</h1></div>
 
         <div class="f">
             <div class="feature-item">
+                <i class="fa-duotone fa-solid fa-text-size" style="font-size: 60px;"></i>
                 <h3>Text Generation</h3>
                 <p>With GPT-4o, generate high-quality, coherent text for various applications with our state-of-the-art AI technology.</p>
             </div>
             <div class="feature-item">
+                <i class="fa-duotone fa-solid fa-images" style="font-size: 60px;"></i>
                 <h3>Image Generation</h3>
                 <p>Create stunning images from textual descriptions quickly and easily with our powerful image generation tools including Dalle3, FLUX.</p>
             </div>
             <div class="feature-item">
+                <i class="fa-duotone fa-solid fa-gauge-max" style="font-size: 60px;"></i>
                 <h3>Super Fast Response</h3>
                 <p>Experience rapid response times and efficient processing with our optimized AI services. The response time is approximately 2s-9s.</p>
             </div>
             <div class="feature-item">
+                <i class="fa-duotone fa-solid fa-clock-rotate-left" style="font-size: 60px;"></i>
                 <h3>Stable 24/7</h3>
                 <p>Enjoy reliable and consistent performance with our service available around the clock.</p>
             </div>
             <div class="feature-item">
+                <i class="fa-duotone fa-solid fa-money-bill-1" style="font-size: 60px;"></i>
                 <h3>Free For All</h3>
                 <p>Access our core features at no cost, making advanced AI technology accessible to everyone.</p>
             </div>
             <div class="feature-item">
-                <h3>Help/Support</h3>
-                <p>Get comprehensive support anytime with our dedicated help, ensuring you have the assistance you need whenever you need it.</p>
+                <i class="fa-duotone fa-solid fa-shield-quartered" style="font-size: 60px;"></i>
+                <h3>Security First</h3>
+                <p>Experience top-notch security measures designed to protect your data and privacy, ensuring a safe and secure environment at all times.</p>
             </div>
         </div>
     </div>
@@ -74,21 +80,22 @@
                 <p><a href="tos.html" id="tos-pp">Terms of service</a></p>
                 <p><a href="tos.html" id="tos-pp">Privacy Policy</a></p>
                 <p><a href="tos.html" id="tos-pp">Fair Use Policy</a></p>
-                <p><a href="tos.html" id="tos-pp">Discord Server</a></p>
+                <p><a href="https://discord.com/invite/hmMBe8YyJ4" id="tos-pp">Discord Server</a></p>
             </div>
 
             <div class="fcc">
                 <h2>Quick Links</h2>
-                <p><a href="tos.html" id="tos-pp">Contact Us</a></p>
-                <p><a href="tos.html" id="tos-pp">Features</a></p>
-                <p><a href="tos.html" id="tos-pp">Home</a></p>
+                <p><a href="https://discord.com/invite/hmMBe8YyJ4" id="tos-pp">Contact Us</a></p>
+                <p><a href="#features" id="tos-pp">Features</a></p>
+                <p><a href="#home" id="tos-pp" target="_blank">Home</a></p>
             </div>
         </div>
         <br>
         <div class="arr">© 2024 XET. All Rights Reserved</div>
     </div>
-    <script src="/js/rhpbs.js"></script>
+
     <script src="/js/loader.js"></script>
+    <script src="/js/rhpbs.js"></script>
     <script src="/js/disable_inspect.js"></script>
 </body>
 </html>
