@@ -272,8 +272,10 @@ window.addEventListener('load', () => {
         loadingDiv.remove();
         document.querySelector('.home').style.visibility = 'visible'
         document.querySelector('.features').style.visibility = 'visible'
+        document.querySelector('.playground').style.visibility = 'visible'
 
         document.querySelector(".home").style.opacity = 1
+        document.querySelector(".playground").style.opacity = 1
         document.querySelector(".features").style.opacity = 1
     }, 3000); // Adjust delay as needed
 });

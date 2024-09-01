@@ -173,6 +173,54 @@ body::-webkit-scrollbar {display: none;}
 
 
 
+.playground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allows the divs to wrap to the next line if they don't fit */
+    background: linear-gradient(360deg, #000000 , #1e1143);
+    min-height: 100vh;
+    color: cyan;
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out, visibility 1s ease-in-out;
+    animation-name: fadee;
+    animation-duration: 2s;
+    visibility: hidden;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 40px0;
+}
+
+.play_desc, .play_div_img {
+    flex: 1; /* Allow both divs to grow and take up available space */
+}
+
+.play_img {
+    max-height: 600px;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+@media (max-width: 1100px) {
+    .playground {
+        flex-direction: column; /* Stack divs vertically on smaller screens */
+    }
+
+    .play_img {
+        margin-top: 20px;
+        max-height: 400px; /* Adjust the max height for smaller screens */
+    }
+
+    .play_desc, .play_div_img {
+        flex: 0; /* Allow both divs to grow and take up available space */
+    }
+}
+
+
+
+
 
 
 .footer {
