@@ -1,5 +1,5 @@
 // RHPBS - Random Home Page Background Selector
-const list = ['earth.mp4', 'stars.mp4', 'glitch.mp4', 'play_buttons.mp4'];
+const list = ['earth.mp4', 'stars.mp4', 'play_buttons.mp4'];
 
 // Select a random video from the list
 const randomVideo = list[Math.floor(Math.random() * list.length)];
