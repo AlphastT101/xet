@@ -119,7 +119,6 @@ body::-webkit-scrollbar {display: none;}
     align-items: center;
     gap: 20px;
     padding: 40px 20px;
-    background: linear-gradient(180deg, #000000 , #1e1143); /* Dark gradient background */
     min-height: 100vh; /* Ensure it takes up at least the full viewport height */
     
     opacity: 0;
@@ -127,6 +126,11 @@ body::-webkit-scrollbar {display: none;}
     animation-name: fadee;
     animation-duration: 2s;
     visibility: hidden;
+
+    background-image: url('back.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .features-heading {
@@ -151,12 +155,12 @@ body::-webkit-scrollbar {display: none;}
     text-align: center;
     box-sizing: border-box;
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    background-color: #27152f; /* Initial background color */
+    background: linear-gradient(140deg, #070707, #240e2e);
 }
 
 .feature-item:hover {
     transform: scale(1.02); /* Zoom in slightly */
-    background-color: #1e1143; /* Lighten background */
+    /* background-color: #1e1143; */
     box-shadow: 0 8px 16px rgba(166, 132, 204, 0.5);
 }
 
@@ -178,9 +182,8 @@ body::-webkit-scrollbar {display: none;}
     justify-content: center;
     align-items: center;
     flex-wrap: wrap; /* Allows the divs to wrap to the next line if they don't fit */
-    background: linear-gradient(360deg, #000000 , #1e1143);
     min-height: 100vh;
-    color: cyan;
+    color: rgb(133, 255, 255);
     opacity: 0;
     transition: opacity 0.7s ease-in-out, visibility 1s ease-in-out;
     animation-name: fadee;
@@ -188,7 +191,11 @@ body::-webkit-scrollbar {display: none;}
     visibility: hidden;
     text-align: center;
     padding: 20px;
-    margin-bottom: 40px0;
+    margin-bottom: 40px;
+    background-image: url('playback.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .play_desc, .play_div_img {
