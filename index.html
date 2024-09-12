@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/loader.css">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-duotone-solid.css">
@@ -17,6 +18,44 @@
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css">
 </head>
 <body>
+
+    <nav class="navbar_">
+        <div class="navmain_">
+            <button class="more-button_"><i class="fa-solid fa-square-caret-down"></i></button>
+            <div class="navlinks_">
+                <ul class="navbar-links_">
+                    <p><a href="#home"><i class="fa-solid fa-house"></i> Home</a></p>
+                    <p><a href="#features"><i class="fa-duotone fa-solid fa-stars"></i> Features</a></p>
+                    <p><a href="play.html"><i class="fa-solid fa-joystick"></i> Playground</a></p>
+                    <p><a href="#playground"><i class="fa-solid fa-gamepad"></i> About Playground</a></p>
+                    <p><a href="https://alphast101.netlify.app" target="_blank"><i class="fa-solid fa-starship-freighter"></i> About Owner</a></p>
+                    <p><a href="https://discord.com/invite/hmMBe8YyJ4" target="_blank" style="background-color: #181818; border-radius: 10px; padding: 9px; margin-top: 5px;"><i class="fa-brands fa-discord"></i> Join Discord</a></p>
+                </ul>
+            </div>
+
+            <div class="navbar-brand_">
+                <a href="#home" class="XET" style="font-size: 20px;">XET</a>
+            </div>
+        </div>
+    </nav>
+    
+
+    <nav class="navbar">
+        <div class="navmain">
+            <div class="navbar-brand">
+                <a href="#home" class="XET" style="font-size: 20px;">XET</a>
+            </div>
+            <ul class="navbar-links">
+                <li><a href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#features"><i class="fa-duotone fa-solid fa-stars"></i> Features</a></li>
+                <li><a href="#playground"><i class="fa-solid fa-joystick"></i> About Playground</a></li>
+                <li><a href="play.html"><i class="fa-solid fa-gamepad"></i> Playground</a></li>
+                <li><a href="https://alphast101.netlify.app" target="_blank"><i class="fa-solid fa-starship-freighter"></i> About Owner</a></li>
+                <li><a href="https://discord.com/invite/hmMBe8YyJ4" target="_blank" style="background-color: #181818; border-radius: 10px;"><i class="fa-brands fa-discord"></i> Join Discord</a></li>
+            </ul>
+        </div>
+    </nav>
+    
     <div class="home" id="home">
         <video id="background-video" autoplay muted loop>
             <source id="video-source" src="earth.mp4" type="video/mp4">
@@ -25,9 +64,9 @@
     
         <div class="home-content">
             <h1><a class="XET">XET</a> Is Here.</h1>
-            <h2 class="home-desc">Empowering Innovation with Advanced AI APIs, Reliable Image Hosting and much more.</h2>
-            <a href="https://discord.com/invite/hmMBe8YyJ4" class="discord-btn" target="_blank" rel="noopener noreferrer">Join Discord</a>
-        </div>
+            <h2 class="home-desc">Empowering Innovation with Advanced AI APIs, Reliable Image Hosting and much more. Built for <span class="highlight">security</span>, optimized for <span class="highlight">speed.</span></h2>
+            <a href="https://discord.com/invite/hmMBe8YyJ4" class="discord-btn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i> Join Discord</a>
+        </div>        
     </div>
     <div class="features" id="features">
         <div class="features-heading"><h1><i class="fa-duotone fa-solid fa-stars fa-flip" style="--fa-animation-duration: 3s;"></i> <a class="XET" style="font-size: 35px;">XET</a> Features</h1></div>
@@ -66,7 +105,7 @@
         </div>
     </div>
 
-    <div class="playground">
+    <div class="playground" id="playground">
         <div class="play_desc">
             <p style="color: white; font-size: 25px; font-family: 'Roboto Mono', monospace;"><i class="fa-duotone fa-solid fa-sparkles" style="font-size: 30px;"></i>     Interactive API Playground</p>
             <p style="max-width: 500px; margin-left: auto; margin-right: auto; font-family: 'Roboto Mono', monospace; font-size: 17px;">Our playground offers a wide range of models and powerful image generation tools,
@@ -84,7 +123,7 @@
 
             <div class="fcc">
                 <h2>About us</h2>
-                <p>We're a company which is AI based, supporting cool services at no-cost.</p>
+                <p>We're a tiny team, supporting cool things at no-cost for your project :)</p>
             </div>
 
             <div class="fcc">
@@ -99,6 +138,7 @@
                 <h2>Quick Links</h2>
                 <p><a href="https://discord.com/invite/hmMBe8YyJ4" id="tos-pp">Contact Us</a></p>
                 <p><a href="#features" id="tos-pp">Features</a></p>
+                <p><a href="#playground" id="tos-pp">Playground</a></p>
                 <p><a href="#home" id="tos-pp">Home</a></p>
             </div>
         </div>
@@ -107,6 +147,7 @@
     </div>
 
     <script src="/js/loader.js"></script>
+    <script src="/js/more.js"></script>
     <!-- <script src="/js/rhpbs.js"></script> -->
     <!-- <script src="/js/disable_inspect.js"></script> -->
 </body>

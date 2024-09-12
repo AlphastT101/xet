@@ -1,6 +1,5 @@
 const loaderss = ['pyramid', 'hex_bricks', 'console_loading', 'loader_cube', 'loader_box_fall']
 const loaders = ['hex_bricks']
-
 const loading_code = {
     "pyramid": `
         <div class="pyramid-loader">
@@ -259,36 +258,30 @@ const loading_code = {
 };
 
 
-const selected_loader = loaders[Math.floor(Math.random() * loaders.length)];
-const loader_code = loading_code[selected_loader] || '';
 
-const loadingDiv = document.createElement('div');
-loadingDiv.innerHTML = loader_code;
-document.body.appendChild(loadingDiv);
-
-// Ensure scrolling is re-enabled once the page is fully loaded
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        loadingDiv.remove();
-        document.querySelector('.home').style.visibility = 'visible'
-        document.querySelector('.features').style.visibility = 'visible'
-        document.querySelector('.playground').style.visibility = 'visible'
-
-        document.querySelector(".home").style.opacity = 1
-        document.querySelector(".playground").style.opacity = 1
-        document.querySelector(".features").style.opacity = 1
-
-        if (window.innerWidth > 450) {
-            document.querySelector('.navbar').style.visibility = 'visible'
-            document.querySelector(".navbar").style.opacity = 1
-        }
-        else{
-            document.querySelector('.navbar_').style.visibility = 'visible'
-            document.querySelector(".navbar_").style.opacity = 1
-        }
+function startup_load() {
 
 
-        // Enable scrolling
-        document.body.style.overflow = 'auto'; // or 'visible'
-    }, 3000); // Adjust delay as needed
-});
+    const selected_loader = loaders[Math.floor(Math.random() * loaders.length)];
+    const loader_code = loading_code[selected_loader] || '';
+
+    const loadingDiv = document.createElement('div');
+    loadingDiv.innerHTML = loader_code;
+    document.body.appendChild(loadingDiv);
+
+    // Ensure scrolling is re-enabled once the page is fully loaded
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            loadingDiv.remove();
+            document.getElementsByClassName("chat-history")[0].style.visibility = 'visible'
+            document.getElementsByClassName("utils")[0].style.visibility = 'visible'
+            document.getElementsByClassName("logo")[0].style.visibility = 'visible'
+
+            document.getElementsByClassName("chat-history")[0].style.opacity = 1
+            document.getElementsByClassName("utils")[0].style.opacity = 1
+            document.getElementsByClassName("logo")[0].style.opacity = 1
+        }, 2000); // Adjust delay as needed
+    });
+}
+
+document.addEventListener('DOMContentLoaded', startup_load);
