@@ -14,15 +14,13 @@
     0% {opacity: 0;}
     100% {opacity: 1;}
 }  
-html {
-    scroll-behavior: smooth;
-}
+html {scroll-behavior: smooth;}
 
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000000; /* Dark theme background */
+    background-color: #0f1117; /* Dark theme background */
     -ms-overflow-style: none;  /* IE and Edge */
     overflow: hidden;
 }
@@ -31,6 +29,7 @@ body::-webkit-scrollbar {display: none;}
 /* PC NAVBAR */
 .navbar {
     position: fixed;
+    background-color: #14111f;
     top: 0;
     z-index: 1000;
     width: 100%;
@@ -71,21 +70,33 @@ body::-webkit-scrollbar {display: none;}
 .navbar-links li {
     display: inline;
 }
+.navbar-brand{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.nav-logo{
+    /* padding-top: 6px; */
+    width: 35px;
+}
+
 
 /* MOBILE NAVBAR */
 .navbar_ {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: black;
+    background: rgb(25, 18, 31);
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000;
+    z-index: 9;
     opacity: 1;
     transition: opacity 0.7s ease-in-out, visibility 0.7s ease-in-out;
     visibility: hidden;
-    padding-top: 10px;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
 }
 
 .navmain_ {
@@ -103,7 +114,7 @@ body::-webkit-scrollbar {display: none;}
     cursor: pointer;
     margin-left: 15px;
     background: transparent;
-    padding: 0;
+    padding-bottom: 0;
     color: white;
 }
 
@@ -118,7 +129,7 @@ body::-webkit-scrollbar {display: none;}
     z-index: 999;
     visibility: hidden;
     text-align: center;
-    background: rgba(37, 37, 37, 0.7);
+    background: rgb(35, 31, 51);
     border-radius: 10px;
 
 }
@@ -142,8 +153,16 @@ body::-webkit-scrollbar {display: none;}
 .navbar-links_ a:hover {
     opacity: 0.8;
 }
-
-
+.navbar-brand_{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.nav-logo_{
+    width: 21px;
+    margin-right: 4px;
+}
 
 
 
@@ -152,18 +171,78 @@ body::-webkit-scrollbar {display: none;}
 
 .home {
     position: relative;
+    height: 1240px;
     width: 100%;
-    height: 100vh;
     overflow: hidden;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
 
     opacity: 0;
     transition: opacity 0.7s ease-in-out, visibility 1s ease-in-out;
     animation-name: fadee;
     animation-duration: 2s;
     visibility: hidden;
+}
+.home-main{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+}
+@media(max-width: 1350px){
+    .home-main{flex-direction: column; margin-top: 5%;}
+    .home{height: auto;}
+}
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover; /* Cover the entire area without stretching */
+    z-index: -1; /* Keep the image behind content */
+}
+.home-content {
+    position: relative;
+    z-index: 1;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    margin: 20px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.XET {
+    display: inline-block;
+    background: linear-gradient(to right, #cccbe0, #df95ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.9rem;
+    font-weight: bold;
+    text-align: left;
+    width: auto;
+    max-width: 450px;
+}
+.home-desc {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    font-weight: 300;
+    line-height: 1.4;
+    margin: 15px 0px;
+    max-width: 600px;
+    word-wrap: break-word;
+}
+.tablet {
+    width: 100%; /* Image scales to fit the container */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 900px; /* Prevents it from becoming larger than 800px */
+    display: block; /* Removes any inline spacing issues */
+    margin: 0 auto; /* Centers the image horizontally */
 }
 
 /* Base button style */
@@ -176,89 +255,99 @@ body::-webkit-scrollbar {display: none;}
     text-align: center;
     text-decoration: none; /* Remove underline */
     border: none;
-    border-radius: 8px;
+    border-radius: 20px;
     background: linear-gradient(45deg, #ffffff, #e0e0e0);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     transition: background 0.5s ease, transform 0.4s ease;
 }
+.play-btn{
+    padding: 10px 20px;
+    margin-left: 20px;
+    display: inline-block;
+    font-size: 16px;
+    color: #ffffff;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    border: 1px white solid;
+    border-radius: 20px;
 
-/* Hover effect */
-.discord-btn:hover {
-    background: linear-gradient(45deg, #ffffff, #b0b0b0);
+
+    cursor: pointer;
+    transition: background 0.5s ease, transform 0.4s ease;
+}
+
+.btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+@media(max-width: 460px){
+    .btn{flex-direction: column; width: 100%;}
+    .play-btn{margin: 15px; width: 90%;}
+    .discord-btn{width: 90%;}
+    .XET{font-size: 2.4rem; text-align: center;}
+    .home{margin-top: 25px;}
+}
+.discord-btn:hover, .play-btn:hover {
     transform: scale(1.05);
 }
 
-/* Active effect */
-.discord-btn:active {
+.discord-btn:active, .play-btn:active {
     background: linear-gradient(45deg, #ffffff, #808080);
     transform: scale(0.95);
 }
 
-
-
 .home video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: 100%;
-    height: 100%;
+    max-width: 500px;
     object-fit: cover; /* Ensure the video covers the container without distortion */
-    transform: translate(-50%, -50%);
-    z-index: -1; /* Place video behind content */
+    overflow: hidden;
+    /* box-shadow: 0 0 16px 8px rgba(166, 132, 204, 0.5); */
+    border-radius: 50%;
+    margin-left: auto;
 }
 
-.home-content {
-    position: relative;
-    z-index: 1;
+.home-models{
+    margin-top: 50px;
+    width: auto;
+    max-width: 1224px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: auto 0px;
+    border-radius: 20px;
+    background-color: #181622;
+    padding: 60px;
+    margin: 50px 20px;
+}
+@media(max-width: 1240px){
+    .home-models{padding: 0px;}
+    .model{margin: 0px 0px;}
+}
+.model{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 35px;
+}
+.textinfo{
+    font-size: 20px;
+    color: grey;
+}
+.stats{
     color: rgb(255, 255, 255);
-    text-align: center;
-    font-family: 'Roboto Mono', monospace;
-}
-
-.XET {
-    display: inline-block;
-    background: linear-gradient(to right, #b2aff0, #532a64);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 4rem;
+    font-size: 40px;
     font-weight: bold;
-}
-.highlight {
-    font-family: 'Anton', sans-serif; /* Set the font to Anton */
-    font-weight: 900;
-    font-size: 24px;
-    background: linear-gradient(to right, #f58585, #b94ae9, #5f2ed4);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: 3px;
-    position: relative;
-
-    /* Text shadow for added bold effect */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2), 2px 2px 3px rgba(0, 0, 0, 0.2);
+    margin: 4px 0;
 }
 
-.highlight::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 3px;
-    width: 100%;
-    height: 2px;
-    background-color: rgb(143, 152, 240);
-}
 
-.home-desc {
-    font-size: 1.1rem;
-    margin-top: 10px;
-    font-weight: 300;
-    line-height: 1.4;
-    max-width: 800px;
-}
+
+
+
+
 
 
 
@@ -269,15 +358,14 @@ body::-webkit-scrollbar {display: none;}
     align-items: center;
     gap: 20px;
     padding: 40px 20px;
-    min-height: 100vh; /* Ensure it takes up at least the full viewport height */
     
-    opacity: 0;
+    /* opacity: 0;
     transition: opacity 0.7s ease-in-out, visibility 1s ease-in-out;
     animation-name: fadee;
     animation-duration: 2s;
-    visibility: hidden;
+    visibility: hidden; */
 
-    background-image: url('back.png');
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -286,6 +374,9 @@ body::-webkit-scrollbar {display: none;}
 .features-heading {
     text-align: center;
     color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    font-size: 19px;
 }
 
 .f {
@@ -294,7 +385,7 @@ body::-webkit-scrollbar {display: none;}
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    max-width: 1200px;
+    max-width: 1700px;
 }
 
 .feature-item {
@@ -305,13 +396,10 @@ body::-webkit-scrollbar {display: none;}
     text-align: center;
     box-sizing: border-box;
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    background: linear-gradient(140deg, #070707, #240e2e);
-}
-
-.feature-item:hover {
-    transform: scale(1.02); /* Zoom in slightly */
-    /* background-color: #1e1143; */
     box-shadow: 0 8px 16px rgba(166, 132, 204, 0.5);
+    /* backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px); */
+    /* background: linear-gradient(140deg, #070707, #240e2e); */
 }
 
 
@@ -321,7 +409,7 @@ body::-webkit-scrollbar {display: none;}
 }
 
 .feature-item p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-family: 'Roboto Mono', monospace;
 }
 
@@ -332,17 +420,21 @@ body::-webkit-scrollbar {display: none;}
     justify-content: center;
     align-items: center;
     flex-wrap: wrap; /* Allows the divs to wrap to the next line if they don't fit */
-    min-height: 100vh;
+    /* min-height: 100vh; */
     color: rgb(133, 255, 255);
-    opacity: 0;
+
+    /* opacity: 0;
     transition: opacity 0.7s ease-in-out, visibility 1s ease-in-out;
     animation-name: fadee;
     animation-duration: 2s;
-    visibility: hidden;
+    visibility: hidden; */
+
     text-align: center;
     padding: 20px;
-    margin-bottom: 40px;
-    background-image: url('playback.png');
+    /* margin-bottom: 40px; */
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), 
+        url('playback.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -375,7 +467,9 @@ body::-webkit-scrollbar {display: none;}
     }
 }
 
-
+@media(max-width: 800px){
+    .playground{margin-bottom: 0px;}
+}
 
 
 

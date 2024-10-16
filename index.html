@@ -19,9 +19,12 @@
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-solid.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
+    <!-- MOBILE NAVBAR START -->
     <nav class="navbar_">
         <div class="navmain_">
             <button class="more-button_"><i class="fa-solid fa-square-caret-down"></i></button>
@@ -37,15 +40,20 @@
             </div>
 
             <div class="navbar-brand_">
+                <img src="logo.png" alt="XET" class="nav-logo_">
                 <a href="#home" class="XET" style="font-size: 20px;">XET</a>
             </div>
         </div>
     </nav>
+    <!-- MOBILE NAVBAR END -->
 
 
+
+    <!-- PC NAVBAR START -->
     <nav class="navbar">
         <div class="navmain">
             <div class="navbar-brand">
+                <img src="logo.png" alt="XET" class="nav-logo">
                 <a href="#home" class="XET" style="font-size: 20px;">XET</a>
             </div>
             <ul class="navbar-links">
@@ -57,45 +65,81 @@
                 <li><a href="https://discord.com/invite/hmMBe8YyJ4" target="_blank" style="background-color: #181818; border-radius: 10px;"> Join Discord</a></li>
             </ul>
         </div>
-    </nav>
+    </nav> <!-- PC NAVBAR END -->
     
+
     <div class="home" id="home">
-        <video id="background-video" autoplay muted loop loading="lazy">
+        <img src="back.png" class="bg-image" alt="Background Image">
+
+        <div class="home-main">
+            <div class="home-content">
+                <h1><a class="XET">XET: Made By AI Enthusiastics, Built For Speed.</a></h1>
+                <h2 class="home-desc">Empowering Innovation with Advanced AI APIs, Reliable Image Hosting and much more. Built for security, optimized for speed.</h2>
+                
+                <div class="btn">
+                    <a href="https://discord.com/invite/hmMBe8YyJ4" class="discord-btn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i> Join Discord</a>
+                    <a href="https://play.xet.one" class="play-btn" target="_blank" rel="noopener noreferrer"><i class="fa-duotone fa-solid fa-globe-pointer"></i> Open Playground</a>
+                </div>
+
+            </div>
+            <img src="tablet.png" class="tablet" alt="Tablet">
+        </div>
+
+        <div class="home-models">
+            <div class="model">
+                <div class="textinfo">SDXL-Turbo With</div>
+                <div class="stats">7s</div>
+                <div class="textinfo">Average Response time</div>
+            </div>
+            <div class="model">
+                <div class="textinfo">FLUX1.1 With</div>
+                <div class="stats">8s</div>
+                <div class="textinfo">Average Response time</div>
+            </div>
+            <div class="model">
+                <div class="textinfo">DALL-E-3 With</div>
+                <div class="stats">21s</div>
+                <div class="textinfo">Average Response time</div>
+            </div>
+            <div class="model">
+                <div class="textinfo">Text Models with</div>
+                <div class="stats">1.8s</div>
+                <div class="textinfo">Average Response time</div>
+            </div>
+        </div>
+    
+        <!-- <video id="background-video" autoplay muted loop loading="lazy">
             <source id="video-source" src="earth.mp4" type="video/mp4">
             Your browser does not support the video tag.
-        </video>
-    
-        <div class="home-content">
-            <h1><a class="XET">XET</a> Is Here.</h1>
-            <h2 class="home-desc">Empowering Innovation with Advanced AI APIs, Reliable Image Hosting and much more. Built for <span class="highlight">security</span>, optimized for <span class="highlight">speed.</span></h2>
-            <a href="https://discord.com/invite/hmMBe8YyJ4" class="discord-btn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i> Join Discord</a>
-        </div>        
+        </video>         -->
     </div>
-    <div class="features" id="features">
-        <div class="features-heading"><h1><i class="fa-duotone fa-solid fa-stars fa-flip" style="--fa-animation-duration: 3s;"></i> <a class="XET" style="font-size: 35px;">XET</a> Features</h1></div>
 
+    <div class="features" id="features">
+        <div class="features-heading" data-aos="fade" data-aos-duration="2000"><h1><i class="fa-duotone fa-solid fa-stars fa-flip" style="--fa-animation-duration: 3s;"></i> <a class="XET" style="font-size: 45px;">XET</a> Features</h1></div>
+        <!-- <h2 style="color: white; margin: none;">Stable. Fast. Depandable.</h2> -->
+        <p data-aos="fade" data-aos-duration="2000" style="max-width: 700px; text-align: center; color: rgb(212, 212, 212); margin: none; font-family: 'Roboto Mono', monospace;">Explore XET’s cutting-edge features, including AI-powered text and image generation. Enjoy fast, secure processing with response times of 2-9 seconds. Available 24/7, XET provides a reliable platform for seamless content creation and advanced AI applications across various fields.</p>
         <div class="f">
             <div class="feature-item">
-                <i class="fa-duotone fa-solid fa-text-size" style="font-size: 60px;"></i>
-                <h3>Text Generation</h3>
-                <p>With GPT-4o, generate high-quality, coherent text for various applications with our state-of-the-art AI technology.</p>
+                <i class="fa-duotone fa-solid fa-text-size" style="font-size: 60px;" data-aos="fade" data-aos-duration="2000"></i>
+                <h3 data-aos="fade" data-aos-duration="2000">Text Generation</h3>
+                <p data-aos="fade" data-aos-duration="2000">With GPT-4o, generate high-quality, coherent text for various applications with our state-of-the-art AI technology.</p>
             </div>
             <div class="feature-item">
-                <i class="fa-duotone fa-solid fa-images" style="font-size: 60px;"></i>
-                <h3>Image Generation</h3>
-                <p>Create stunning images from textual descriptions quickly and easily with our powerful image generation tools including Dalle3, FLUX.</p>
+                <i data-aos="fade" data-aos-duration="2000" class="fa-duotone fa-solid fa-images" style="font-size: 60px;"></i>
+                <h3 data-aos="fade" data-aos-duration="2000">Image Generation</h3>
+                <p data-aos="fade" data-aos-duration="2000">Create stunning images from textual descriptions quickly and easily with our powerful image generation tools including Dalle3, FLUX.</p>
             </div>
             <div class="feature-item">
-                <i class="fa-duotone fa-solid fa-gauge-max" style="font-size: 60px;"></i>
-                <h3>Super Fast Response</h3>
-                <p>Experience rapid response times and efficient processing with our optimized AI services. The response time is approximately 2s-9s.</p>
+                <i data-aos="fade" data-aos-duration="2000" class="fa-duotone fa-solid fa-gauge-max" style="font-size: 60px;"></i>
+                <h3 data-aos="fade" data-aos-duration="2000">Fast & Secure</h3>
+                <p data-aos="fade" data-aos-duration="2000">Experience rapid response times and efficient processing with our optimized AI services. The response time is approximately 2s-9s.</p>
             </div>
             <div class="feature-item">
-                <i class="fa-duotone fa-solid fa-clock-rotate-left" style="font-size: 60px;"></i>
-                <h3>Stable 24/7</h3>
-                <p>Enjoy reliable and consistent performance with our service available around the clock.</p>
+                <i data-aos="fade" data-aos-duration="2000" class="fa-duotone fa-solid fa-clock-rotate-left" style="font-size: 60px;"></i>
+                <h3 data-aos="fade" data-aos-duration="2000">Image Hosting</h3>
+                <p data-aos="fade" data-aos-duration="2000">Enjoy reliable and consistent performance with our service available around the clock.</p>
             </div>
-            <div class="feature-item">
+            <!-- <div class="feature-item">
                 <i class="fa-duotone fa-solid fa-money-bill-1" style="font-size: 60px;"></i>
                 <h3>Free For All</h3>
                 <p>Access our core features at no cost, making advanced AI technology accessible to everyone.</p>
@@ -104,9 +148,10 @@
                 <i class="fa-duotone fa-solid fa-shield-quartered" style="font-size: 60px;"></i>
                 <h3>Security First</h3>
                 <p>Experience top-notch security measures designed to protect your data and privacy, ensuring a safe and secure environment at all times.</p>
-            </div>
+            </div> -->
         </div>
     </div>
+
 
     <div class="playground" id="playground">
         <div class="play_desc">
@@ -149,6 +194,10 @@
         <div class="arr">© 2024 XET. All Rights Reserved</div>
     </div>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
@@ -163,9 +212,10 @@
             "availability": "https://schema.org/InStock"
           }
         }
-    </script>               
+    </script>
     <script src="/js/loader.js"></script>
     <script src="/js/more.js"></script>
+
     <!-- <script src="/js/rhpbs.js"></script> -->
     <!-- <script src="/js/disable_inspect.js"></script> -->
 </body>

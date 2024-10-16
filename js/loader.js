@@ -271,14 +271,14 @@ window.addEventListener('load', () => {
     setTimeout(() => {
         loadingDiv.remove();
         document.querySelector('.home').style.visibility = 'visible'
-        document.querySelector('.features').style.visibility = 'visible'
-        document.querySelector('.playground').style.visibility = 'visible'
+        // document.querySelector('.features').style.visibility = 'visible'
+        // document.querySelector('.playground').style.visibility = 'visible'
 
         document.querySelector(".home").style.opacity = 1
-        document.querySelector(".playground").style.opacity = 1
-        document.querySelector(".features").style.opacity = 1
+        // document.querySelector(".playground").style.opacity = 1
+        // document.querySelector(".features").style.opacity = 1
 
-        if (window.innerWidth > 450) {
+        if (window.innerWidth > 1001) {
             document.querySelector('.navbar').style.visibility = 'visible'
             document.querySelector(".navbar").style.opacity = 1
         }
@@ -291,4 +291,21 @@ window.addEventListener('load', () => {
         // Enable scrolling
         document.body.style.overflow = 'auto'; // or 'visible'
     }, 3000); // Adjust delay as needed
+});
+
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 1001) {
+        document.querySelector('.navbar').style.visibility = 'visible'
+        document.querySelector(".navbar").style.opacity = 1
+
+        document.querySelector('.navbar_').style.visibility = 'hidden'
+        document.querySelector(".navbar_").style.opacity = 0
+    }
+    else{
+        document.querySelector('.navbar_').style.visibility = 'visible'
+        document.querySelector(".navbar_").style.opacity = 1
+
+        document.querySelector('.navbar').style.visibility = 'hidden'
+        document.querySelector(".navbar").style.opacity = 0
+    }
 });
