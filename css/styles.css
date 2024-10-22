@@ -379,6 +379,18 @@ body::-webkit-scrollbar {display: none;}
     max-width: 1700px;
 }
 
+.feature-desc{
+    max-width: 700px;
+    text-align: center;
+    color: rgb(212, 212, 212);
+    font-weight: 400;
+    letter-spacing: 0.009cm;
+    font-size: 19px;
+    margin: none;
+    font-family: 'Clarity City', sans-serif;
+    line-height: 23px;
+}
+
 .feature-item {
     border-radius: 15px;
     padding: 20px;
@@ -400,8 +412,11 @@ body::-webkit-scrollbar {display: none;}
 }
 
 .feature-item p {
-    font-size: 0.9rem;
-    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    letter-spacing: 0cm;
+    font-weight: 400;
+    font-family: "Clarity City", sans-serif;
+    letter-spacing: 0.01cm;
 }
 
 
@@ -434,13 +449,14 @@ body::-webkit-scrollbar {display: none;}
 }
 .play-desc{
     max-width: 620px;
-    font-size:18px;
-    line-height: 18px;
+    font-size:19px;
+    line-height: 24px;
     font-weight: 400;
     color: rgb(231, 233, 239);
     text-align: center;
     font-family: "Clarity City", sans-serif;
     margin-bottom: 50px;
+    letter-spacing: 0.01cm;
 }
 .play-main-bg {
     position: absolute;
@@ -511,57 +527,156 @@ body::-webkit-scrollbar {display: none;}
 
 
 .footer {
-    background-color: #000000; /* Ensure consistent background color */
+    position: relative;
     text-align: center;
     color: white;
-    padding: 50px;
-    font-family: 'Roboto Mono', monospace;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: "Clarity City", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.01cm;
 }
 
-.footer-content {
+.footer-bg-top {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: contain;
+}
+
+
+.footer-top {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     display: flex;
-    flex-direction: row; /* Align children in a row by default */
-    justify-content: space-between; /* Space out items */
-    width: 100%; /* Full width to allow flex items to grow */
-    max-width: 1200px; /* Optional: to control the maximum width of the content */
-    margin-bottom: 10px; /* Space between footer-content and arr */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    flex-direction: column;
+    margin-top: 400px;
+}
+
+.footer-top-header {
+    flex-wrap: wrap;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    font-size: 3rem;
+    padding-bottom: 45px;
+    height: auto;
+    text-align: center;
+}
+
+.footer-top-desc {
+    color: white;
+    font-size: 19px;
+    letter-spacing: 0.009cm;
+    max-width: 650px;
+    line-height: 24px;
+    text-align: center;
+    margin: 0 auto;
+}
+.join-now {
+    margin-top: 60px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-image: url('join_nowbg.png');
+    background-position: center;
+    background-size: cover;  /* Ensures the image covers the entire div, even if it crops */
+    background-repeat: no-repeat;
+    width: 1200px;
+    height: 620px; /* The height will adapt based on content */
+    padding: 20px;  /* Add padding if content is too close to the edge */
+}
+.join-now-header{
+    flex-wrap: wrap;
+    font-size: 3rem;
+    padding-bottom: 45px;
+    height: auto;
+    text-align: center;
+}
+.join-now-desc{
+    max-width: 700px;
+    font-size: 18px;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* margin-top: -200px; */
+}
+.footer-content-div{
+    display: flex;
+    flex-direction: row;
+    /* margin-top: -400px; */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    padding: 40px;
+
+    background-color: rgba(15, 15, 15, 0.5);
+}
+.footer-bg-bottom-div{
+    width: auto;
+    height: auto;
+}
+
+.footer-bg-bottom {
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: contain;
 }
 
 .fcc {
-    flex: 1; /* Allow items to grow and fill available space */
-    margin: 0 20px; /* Space between items */
-    max-width: 200px; /* Optional: control max width for each section */
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    flex: 1;
+    margin: auto 60px;
+    max-width: 600px;
+    max-height: 200px;
+    text-align: center;
 }
 
 .arr {
     text-align: center;
+    margin: 20px auto;
 }
 
-/* Style for links */
+
 .footer a {
-    color: #b3ceff;
     text-decoration: none;
+    color: rgb(190, 190, 190);
+    font-size: 18px;
 }
 
 .footer a:hover {
-    text-decoration: underline;
-    color: #ddd;
+    color: #7e5bff;
 }
 
-/* Media query for screens smaller than 768px */
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column; /* Stack items vertically on small screens */
-        align-items: center; /* Center-align items horizontally */
-    }
 
-    .fcc {
-        margin: 10px 0; /* Adjust margin for vertical spacing */
-        max-width: none; /* Remove max-width to allow items to use full width */
-    }
+@media (max-width:1300px) {
+    .join-now{width: auto; margin: 20px; height: auto;}
+    .footer-top{margin-top: 300px;}
+}
+
+@media (max-width:650px) {
+    .join-now{width: auto; margin: 20px; height: auto;}
+}
+
+@media(max-width: 950px){
+    .footer-content-div{flex-direction: column;}
+    .footer-top-header{font-size: 2rem;}
+    .join-now-header{font-size: 2rem;}
+    .join-now{padding-top: 10px;}
+    .footer-top{margin-top: 150px;}
 }
