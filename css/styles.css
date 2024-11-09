@@ -399,11 +399,9 @@ body::-webkit-scrollbar {display: none;}
     text-align: center;
     box-sizing: border-box;
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 8px 16px rgba(166, 132, 204, 0.5);
-    /* backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px); */
-    /* background: linear-gradient(140deg, #070707, #240e2e); */
+    box-shadow: 0 -2px 5px rgba(166, 132, 204, 0.5), 0 2px 5px rgba(166, 132, 204, 0.5);
 }
+
 
 
 .feature-item h3 {
