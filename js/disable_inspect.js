@@ -7,6 +7,7 @@ const checkDevTools = () => {
     }
 };
 
+
 // Check for DevTools on load and resize
 window.addEventListener('load', checkDevTools);
 window.addEventListener('resize', checkDevTools);
