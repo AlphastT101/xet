@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://xet.netlify.app/sitemap.xml
+Sitemap: https://xet.one/sitemap.xml

@@ -159,13 +159,11 @@ body::-webkit-scrollbar {display: none;}
 
 .home {
     position: relative;
-    height: 1240px;
     width: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
 
     opacity: 0;
     transition: opacity 0.7s ease-in-out, visibility 1s ease-in-out;
@@ -226,11 +224,10 @@ body::-webkit-scrollbar {display: none;}
     word-wrap: break-word;
 }
 .tablet {
-    width: 100%; /* Image scales to fit the container */
-    height: auto; /* Maintains aspect ratio */
-    max-width: 900px; /* Prevents it from becoming larger than 800px */
-    display: block; /* Removes any inline spacing issues */
-    margin: 0 auto; /* Centers the image horizontally */
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    display: block;
 }
 
 /* Base button style */
@@ -344,30 +341,24 @@ body::-webkit-scrollbar {display: none;}
 
 .features {
     display: flex;
-    flex-direction: column; /* Stack the heading and feature items vertically */
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     gap: 20px;
     padding: 40px 20px;
-    
-    /* opacity: 0;
-    transition: opacity 0.7s ease-in-out, visibility 1s ease-in-out;
-    animation-name: fadee;
-    animation-duration: 2s;
-    visibility: hidden; */
-
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-image: radial-gradient(closest-side, rgba(35, 39, 46, .70), #0f1117), url(features_back.png);
 }
+
 
 .features-heading {
     text-align: center;
     color: #e0e0e0;
-    margin: 0;
-    padding: 0;
     font-size: 19px;
+}
+.feature-desc{
+    text-align: center;
+    color: rgb(212, 212, 212);
+    font-size: 19px;
+    font-family: 'Clarity City', sans-serif;
+    margin-top: -20px;
 }
 
 .f {
@@ -376,47 +367,50 @@ body::-webkit-scrollbar {display: none;}
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    max-width: 1700px;
 }
 
-.feature-desc{
-    max-width: 700px;
-    text-align: center;
-    color: rgb(212, 212, 212);
-    font-weight: 400;
-    letter-spacing: 0.009cm;
-    font-size: 19px;
-    margin: none;
-    font-family: 'Clarity City', sans-serif;
-    line-height: 23px;
+.f > div {
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    box-sizing: border-box;
+}
+
+@media (max-width: 1000px) {
+    .f > div {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .f > div {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 }
 
 .feature-item {
     border-radius: 15px;
     padding: 20px;
-    max-width: 360px;
     color: #e0e0e0;
-    text-align: center;
-    box-sizing: border-box;
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 -2px 5px rgba(166, 132, 204, 0.5), 0 2px 5px rgba(166, 132, 204, 0.5);
+    text-align: left;
+    /* box-sizing: border-box; */
+    backdrop-filter: blur(2px);
 }
-
-
-
 .feature-item h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 10px;
 }
-
 .feature-item p {
-    font-size: 18px;
-    letter-spacing: 0cm;
-    font-weight: 400;
-    font-family: "Clarity City", sans-serif;
-    letter-spacing: 0.01cm;
-}
+    font-size: 15.5px;
+    color: #9CA3AF;
+    font-family: Verdana, Geneva, sans-serif;
+    line-height: 1.6
 
+}
+#features_icons{
+    width: 60px;
+}
 
 
 
@@ -504,7 +498,6 @@ body::-webkit-scrollbar {display: none;}
     margin-left: auto;
     margin-right: auto;
     font-family: 'Roboto Mono', monospace; font-size: 17px;
-    /* padding: 30px; */
 }
 
 @media(max-width:1000px){
@@ -548,7 +541,6 @@ body::-webkit-scrollbar {display: none;}
     width: 100%;
     object-fit: contain;
 }
-
 
 .footer-top {
     align-items: center;
@@ -612,12 +604,10 @@ body::-webkit-scrollbar {display: none;}
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* margin-top: -200px; */
 }
 .footer-content-div{
     display: flex;
     flex-direction: row;
-    /* margin-top: -400px; */
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
@@ -649,8 +639,6 @@ body::-webkit-scrollbar {display: none;}
     text-align: center;
     margin: 20px auto;
 }
-
-
 .footer a {
     text-decoration: none;
     color: rgb(190, 190, 190);
@@ -660,7 +648,6 @@ body::-webkit-scrollbar {display: none;}
 .footer a:hover {
     color: #7e5bff;
 }
-
 
 @media (max-width:1300px) {
     .join-now{width: auto; margin: 20px; height: auto;}
