@@ -394,7 +394,6 @@ body::-webkit-scrollbar {display: none;}
     padding: 20px;
     color: #e0e0e0;
     text-align: left;
-    /* box-sizing: border-box; */
     backdrop-filter: blur(2px);
 }
 .feature-item h3 {
@@ -434,21 +433,17 @@ body::-webkit-scrollbar {display: none;}
     margin-top: 60px;
 }
 .play-header{
-    font-size: 50px;
     text-align: center;
-    margin-bottom: 20px;
-    max-width: 660px;
 }
 .play-desc{
     max-width: 620px;
-    font-size:19px;
-    line-height: 24px;
-    font-weight: 400;
-    color: rgb(231, 233, 239);
     text-align: center;
-    font-family: "Clarity City", sans-serif;
     margin-bottom: 50px;
-    letter-spacing: 0.01cm;
+
+    font-size: 15.5px;
+    color: #9CA3AF;
+    font-family: Verdana, Geneva, sans-serif;
+    line-height: 1.6
 }
 .play-main-bg {
     position: absolute;
@@ -468,12 +463,12 @@ body::-webkit-scrollbar {display: none;}
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
-    border-radius: 50px;
-    gap: 20px; /* Adds space between elements */
+    border-radius: 30px;
+    gap: 20px;
 }
 
 .play_div_img {
-    flex: 1; /* Ensures it takes proportional space */
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -484,7 +479,6 @@ body::-webkit-scrollbar {display: none;}
     max-width: 600px;
     height: auto;
     object-fit: contain;
-    border-radius: 20px;
 }
 
 .play-main-desc {
@@ -497,7 +491,10 @@ body::-webkit-scrollbar {display: none;}
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
-    font-family: 'Roboto Mono', monospace; font-size: 17px;
+    font-size: 15.5px;
+    color: #9CA3AF;
+    font-family: Verdana, Geneva, sans-serif;
+    line-height: 1.6
 }
 
 @media(max-width:1000px){
@@ -527,10 +524,7 @@ body::-webkit-scrollbar {display: none;}
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-bottom: 50px;
     font-family: "Clarity City", sans-serif;
-    font-weight: 400;
-    letter-spacing: 0.01cm;
 }
 
 .footer-bg-top {
@@ -562,13 +556,14 @@ body::-webkit-scrollbar {display: none;}
 }
 
 .footer-top-desc {
-    color: white;
-    font-size: 19px;
-    letter-spacing: 0.009cm;
     max-width: 650px;
-    line-height: 24px;
     text-align: center;
     margin: 0 auto;
+
+    font-size: 15.5px;
+    color: #9CA3AF;
+    font-family: Verdana, Geneva, sans-serif;
+    line-height: 1.6
 }
 .join-now {
     margin-top: 60px;
@@ -579,24 +574,29 @@ body::-webkit-scrollbar {display: none;}
     text-align: center;
     justify-content: center;
     align-items: center;
+
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+
     background-image: url('join_nowbg.png');
     background-position: center;
-    background-size: cover;  /* Ensures the image covers the entire div, even if it crops */
+    background-size: cover;
     background-repeat: no-repeat;
-    width: 1200px;
-    height: 620px; /* The height will adapt based on content */
-    padding: 20px;  /* Add padding if content is too close to the edge */
 }
 .join-now-header{
     flex-wrap: wrap;
-    font-size: 3rem;
+    font-size: 2rem;
     padding-bottom: 45px;
     height: auto;
     text-align: center;
 }
 .join-now-desc{
     max-width: 700px;
-    font-size: 18px;
+    font-size: 15.5px;
+    color: #838a97;
+    font-family: Verdana, Geneva, sans-serif;
+    line-height: 1.6
 }
 
 .footer-bottom {
@@ -604,6 +604,7 @@ body::-webkit-scrollbar {display: none;}
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 80px;
 }
 .footer-content-div{
     display: flex;
@@ -613,13 +614,10 @@ body::-webkit-scrollbar {display: none;}
     border-radius: 20px;
     padding: 40px;
 
-    background-color: rgba(15, 15, 15, 0.5);
+    background: rgb(19 18 33 / 50%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
-.footer-bg-bottom-div{
-    width: auto;
-    height: auto;
-}
-
 .footer-bg-bottom {
     top: 0;
     left: 0;
