@@ -284,15 +284,6 @@ body::-webkit-scrollbar {display: none;}
     transform: scale(0.95);
 }
 
-.home video {
-    max-width: 500px;
-    object-fit: cover; /* Ensure the video covers the container without distortion */
-    overflow: hidden;
-    /* box-shadow: 0 0 16px 8px rgba(166, 132, 204, 0.5); */
-    border-radius: 50%;
-    margin-left: auto;
-}
-
 .home-models {
     margin-top: 50px;
     width: auto;
@@ -618,13 +609,6 @@ body::-webkit-scrollbar {display: none;}
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
-.footer-bg-bottom {
-    top: 0;
-    left: 0;
-    width: 100%;
-    object-fit: contain;
-}
-
 .fcc {
     flex: 1;
     margin: auto 60px;
