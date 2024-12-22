@@ -262,3 +262,10 @@ body {
 .close:hover {
     color: red;
 }
+
+pre{
+    background-color: black;
+    border-radius: 20px;
+    width: 70%;
+    justify-content: left;
+}

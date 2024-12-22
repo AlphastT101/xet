@@ -68,9 +68,7 @@ document.querySelector('.verification-form').addEventListener('submit', async (e
         });
 
         if (response.ok) {
-            // alert(response.status)
             check.disabled = false;
-            // alert(await response.json());
             window.location.href = login_url;
         } else {
             const errorData = await response.json();
