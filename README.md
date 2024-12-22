@@ -1,7 +1,11 @@
-# XET Home page
+# XET
 
-This repo includes the codebase for XET AI home page.
+This repo includes the codebase for XET AI website.
 Accessible at: https://xet.one
+Register: https://xet.one/login
+Login: https://xet.one/login
+Dashboard: https://xet.one/dashboard
+Playground: https://play.xet.one
 
-* XET is a small team providing AI API at no-cost, including powerful models like flux-dev, sdxl-turbo, dalle3 and much more. More cool things will be added in the future.
-* A contribution is very appreciated!
+Please, if you find any bugs, notify us in our discord server or via our email xet@xet.one
+The entire codebase is coded by the founder(alphast101).
