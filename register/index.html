@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Login To XET</title>
+  	<title>Register To XET</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -16,7 +16,7 @@
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">Login To XET</h2>
+					<h2 class="heading-section">Register To XET</h2>
 				</div>
 			</div>
 			<div class="row justify-content-center">
@@ -24,15 +24,15 @@
 					<div class="wrap d-md-flex">
 						<div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
 							<div class="text w-100">
-								<h2>Welcome to login</h2>
-								<p>Don't have an account?</p>
-								<a href="/register/index.html" class="btn btn-white btn-outline-white">Sign Up</a>
+								<h2>Welcome to Register</h2>
+								<p>Already have an account?</p>
+								<a href="/login/index.html" class="btn btn-white btn-outline-white">Sign in</a>
 							</div>
 			    		</div>
 						<div class="login-wrap p-4 p-lg-5">
 							<div class="d-flex">
 								<div class="w-100">
-									<h3 class="mb-4">Sign In</h3>
+									<h3 class="mb-4">Sign up</h3>
 								</div>
 								<!-- <div class="w-100">
 									<p class="social-media d-flex justify-content-end">
@@ -50,14 +50,25 @@
 
 								<div class="form-group mb-3">
 									<label class="label" for="password">Password</label>
-									<input type="password" class="form-control" placeholder="Password" required>
+									<label class="label no_match" for="password" style="color: red; display: none;">| Password does not match</label>
+									<input type="password" class="form-control" placeholder="Password" id="password" required>
+								</div>
+
+								<div class="form-group mb-3">
+									<label class="label" for="password">Confirm Password</label>
+									<label class="label no_match" for="password" style="color: red; display: none;">| Password does not match</label>
+									<input type="password" class="form-control" placeholder="Confirm Password" id="confirm_password" required>
+								</div>
+
+								<div class="form-group mb-3">
+									<label class="label error-msg" style="color: red; display: none;">ARGGHHH</label>
 								</div>
 
 								<div class="form-group">
-									<button type="submit" class="form-control btn btn-primary submit px-3">Sign In</button>
+									<button type="submit" class="form-control btn btn-primary submit px-3" id="signup_button" disabled>Sign up</button>
 								</div>
 
-								<div class="form-group d-md-flex">
+								<!-- <div class="form-group d-md-flex">
 									<div class="w-50 text-left">
 										<label class="checkbox-wrap checkbox-primary mb-0">Remember Me
 											<input type="checkbox" checked>
@@ -67,6 +78,23 @@
 									<div class="w-50 text-md-right">
 										<a href="#">Forgot Password</a>
 									</div>
+								</div> -->
+							</form>
+
+
+							<form action="#" class="verification-form" style="display: none;">
+
+								<div class="form-group mb-3">
+									<label class="label" for="text">Enter the verification code that is sent to your email</label>
+									<input type="text" class="form-control" placeholder="Verification code" required>
+								</div>
+
+								<div class="form-group mb-3">
+									<label class="label verify-error" style="color: red; display: none;">WHAT?!?!</label>
+								</div>
+
+								<div class="form-group">
+									<button type="submit" id="check" class="form-control btn btn-primary submit px-3">Check</button>
 								</div>
 							</form>
 						</div>

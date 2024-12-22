@@ -75,7 +75,7 @@ body::-webkit-scrollbar {display: none;}
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgb(25, 18, 31);
+    backdrop-filter: blur(10px);
     position: fixed;
     width: 100%;
     top: 0;
@@ -84,6 +84,7 @@ body::-webkit-scrollbar {display: none;}
     transition: opacity 0.7s ease-in-out, visibility 0.7s ease-in-out;
     visibility: hidden;
     padding-top: 7.5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     padding-bottom: 7.5px;
 }
 
