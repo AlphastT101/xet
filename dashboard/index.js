@@ -1,5 +1,5 @@
 const underDev = false;
-const api_url = underDev ? 'http://192.168.0.105:6750' : 'https://api.xet.one';
+const api_url = underDev ? 'http://192.168.0.107:6750' : 'https://api.xet.one';
 let jwt_token = null;
 
 function getCookie(name) {
@@ -51,7 +51,6 @@ async function fetchAccountInfo() {
             document.querySelector('.welcome-name').textContent = `Welcome, ${name}!`;
             document.querySelector('.log-out-in').textContent = `You'll be automatically logged out in ${exp}. To keep your account secure.`;
         } else {
-            alert(response.status)
             const root_domain = `${window.location.protocol}//${window.location.hostname}:${window.location.port}`;
             window.location.href = `${root_domain}/login`;            
         }
@@ -108,7 +107,7 @@ async function showChart() {
         }
     } catch (error) {
         console.error('Error:', error);
-        alert('An error occurred. Please try clearing the cookies.');
+        alert(`An error occurred. Please try clearing the cookies. Error: ${error}`);
     }
 }
 

@@ -3,12 +3,12 @@
 })(jQuery);
 
 const underDev = false;
-const api_url = underDev ? "http://192.168.0.105:6750" : "https://api.xet.one";
-const login_url = underDev ? "http://192.168.0.105:5500/login" : "https://xet.one/login"
+const api_url = underDev ? "http://192.168.0.107:6750" : "https://api.xet.one";
+const dash_url = underDev ? "http://192.168.0.107:5500/dashboard" : "https://xet.one/dashboard"
 email_main = null;
 
 
-document.querySelector('.signin-form').addEventListener('submit', async (event) => {
+document.querySelector('.signup-form').addEventListener('submit', async (event) => {
     const signupButton = document.getElementById("signup_button");
     signupButton.disabled = true;
     event.preventDefault(); // Prevent the default form submission
@@ -31,8 +31,7 @@ document.querySelector('.signin-form').addEventListener('submit', async (event) 
         });
 
         if (response.ok) {
-            const data = await response.json();
-            document.querySelector('.signin-form').style.display = 'none';
+            document.querySelector('.signup-form').style.display = 'none';
             document.querySelector('.verification-form').style.display = 'inline';
         } else {
             const errorData = await response.json();
@@ -68,8 +67,10 @@ document.querySelector('.verification-form').addEventListener('submit', async (e
         });
 
         if (response.ok) {
-            check.disabled = false;
-            window.location.href = login_url;
+            const data = await response.json();
+            console.log(data)
+            const dashboardUrl = `${dash_url}?token=${data.access_token}&expiration=${encodeURIComponent(data.exp)}`;
+            window.location.href = dashboardUrl;
         } else {
             const errorData = await response.json();
             console.error('Login failed:', errorData.detail);
@@ -116,5 +117,4 @@ function setupPasswordValidation() {
     confirmPasswordInput.addEventListener("input", validatePasswords);
 }
 
-// Call the function to initialize the validation
 setupPasswordValidation();

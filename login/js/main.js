@@ -4,8 +4,8 @@
 
 const underDev = false;
 
-const api_url = underDev ? "http://192.168.0.105:6750" : "https://api.xet.one";
-const dash_url = underDev ? "http://192.168.0.105:5500/dashboard" : "https://xet.one/dashboard";
+const api_url = underDev ? "http://192.168.0.107:6750" : "https://api.xet.one";
+const dash_url = underDev ? "http://192.168.0.107:5500/dashboard" : "https://xet.one/dashboard";
 
 document.querySelector('.signin-form').addEventListener('submit', async (event) => {
     event.preventDefault(); // Prevent the default form submission
