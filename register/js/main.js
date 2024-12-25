@@ -68,9 +68,11 @@ document.querySelector('.verification-form').addEventListener('submit', async (e
 
         if (response.ok) {
             const data = await response.json();
-            console.log(data)
-            const dashboardUrl = `${dash_url}?token=${data.access_token}&expiration=${encodeURIComponent(data.exp)}`;
-            window.location.href = dashboardUrl;
+            setTimeout(() => {
+                console.log(data)
+                const dashboardUrl = `${dash_url}?token=${data.access_token}&expiration=${encodeURIComponent(data.exp)}`;
+                window.location.href = dashboardUrl;
+            }, 200);
         } else {
             const errorData = await response.json();
             console.error('Login failed:', errorData.detail);
