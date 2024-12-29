@@ -15,17 +15,24 @@ body {
 
 /* Sidebar Styles */
 .sidebar {
-    background-color:#080812;
+    background-color: #080812;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
     border-right: 1px solid #2f2f2f;
+
+    /* Fix the sidebar*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
 }
-.sidebar-logo{
+
+.sidebar-logo {
     max-width: 30px;
     height: 30px;
-    /* margin-right: 5px; */
 }
+
 .sidebar-header {
     color: white;
     background-color: #080812;
@@ -36,6 +43,7 @@ body {
     height: 60px;
     /* border-bottom: 1px solid #2f2f2f; */
 }
+
 .sidebar-menu li a.active {
     font-weight: bold;
     color: white;
@@ -45,21 +53,54 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
+    position: relative;
 }
-
+.sidebar-menu li {
+    position: relative;
+}
 .sidebar-menu li a {
-    display: block;
     color: #8f8f8f;
     text-decoration: none;
     padding: 10px 15px;
     transition: background 0.3s;
     border-radius: 10px;
     margin: 5px;
-}
 
+    position: relative;
+    display: inline-block;
+}
 .sidebar-menu li a:hover {
     background-color: #161616;
 }
+
+.sidebar-menu a::after {
+    content: attr(data-tooltip); /* Use the data-tooltip attribute */
+    position: absolute;
+    bottom: 100%; /* Position above the link */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8); /* Tooltip background */
+    color: white; /* Tooltip text color */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    transform: translateX(-50%) translateY(10px); /* Start position */
+    pointer-events: none; /* Prevent tooltip from blocking hover */
+    z-index: 10;
+    margin-left: 3px;
+}
+
+.sidebar-menu a:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0); /* Fade in and move up */
+}
+
+
 
 
 
@@ -70,6 +111,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #070018;
+    margin-left: 58px;
 }
 
 .navbar {
@@ -155,6 +197,7 @@ body {
     .mobile-navbar{display: inline;}
     .navbar{display: none;}
     .sidebar{display: none;}
+    .main-content{margin-left: 0px;}
 }
 
 

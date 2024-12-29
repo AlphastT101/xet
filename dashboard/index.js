@@ -1,5 +1,5 @@
-const underDev = false;
-const api_url = underDev ? 'http://192.168.0.107:6750' : 'https://api.xet.one';
+const underDev = true;
+const api_url = underDev ? 'http://192.168.0.108:6750' : 'https://api.xet.one';
 let jwt_token = null;
 
 function getCookie(name) {

@@ -2,16 +2,15 @@
 	"use strict";
 })(jQuery);
 
-const underDev = false;
-const api_url = underDev ? "http://192.168.0.107:6750" : "https://api.xet.one";
-const dash_url = underDev ? "http://192.168.0.107:5500/dashboard" : "https://xet.one/dashboard"
+const underDev = true;
+const api_url = underDev ? "http://192.168.0.108:6750" : "https://api.xet.one";
 email_main = null;
 
 
 document.querySelector('.signup-form').addEventListener('submit', async (event) => {
+    event.preventDefault(); // Prevent the default form submission
     const signupButton = document.getElementById("signup_button");
     signupButton.disabled = true;
-    event.preventDefault(); // Prevent the default form submission
 
     const email = document.querySelector('input[placeholder="Email"]').value;
     const password = document.querySelector('input[placeholder="Password"]').value;
@@ -48,6 +47,7 @@ document.querySelector('.signup-form').addEventListener('submit', async (event) 
 });
 
 document.querySelector('.verification-form').addEventListener('submit', async (event) => {
+    event.preventDefault();
     const code = document.querySelector('input[placeholder="Verification code"]').value;
     const check = document.getElementById("check");
     check.disabled = true;
@@ -67,12 +67,13 @@ document.querySelector('.verification-form').addEventListener('submit', async (e
         });
 
         if (response.ok) {
+            // alert("200")
             const data = await response.json();
-            setTimeout(() => {
-                console.log(data)
-                const dashboardUrl = `${dash_url}?token=${data.access_token}&expiration=${encodeURIComponent(data.exp)}`;
-                window.location.href = dashboardUrl;
-            }, 200);
+            const root_domain = `${window.location.protocol}//${window.location.hostname}:${window.location.port}`;
+            const dash_url = `${root_domain}/dashboard`;
+            const dashboardUrl = `${dash_url}?token=${data.access_token}&expiration=${encodeURIComponent(data.exp)}`;
+            // console.log(dashboardUrl)
+            window.location.href = dashboardUrl;
         } else {
             const errorData = await response.json();
             console.error('Login failed:', errorData.detail);

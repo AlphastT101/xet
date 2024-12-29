@@ -2,10 +2,9 @@
 	"use strict";
 })(jQuery);
 
-const underDev = false;
+const underDev = true;
 
-const api_url = underDev ? "http://192.168.0.107:6750" : "https://api.xet.one";
-const dash_url = underDev ? "http://192.168.0.107:5500/dashboard" : "https://xet.one/dashboard";
+const api_url = underDev ? "http://192.168.0.108:6750" : "https://api.xet.one";
 
 document.querySelector('.signin-form').addEventListener('submit', async (event) => {
     event.preventDefault(); // Prevent the default form submission
@@ -29,6 +28,8 @@ document.querySelector('.signin-form').addEventListener('submit', async (event) 
 
         if (response.ok) {
             const data = await response.json();
+            const root_domain = `${window.location.protocol}//${window.location.hostname}:${window.location.port}`;
+            dash_url = `${root_domain}/dashboard`;
             const dashboardUrl = `${dash_url}?token=${data.access_token}&expiration=${encodeURIComponent(data.expiration)}`;
             window.location.href = dashboardUrl;
         } else {
