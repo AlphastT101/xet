@@ -1,4 +1,4 @@
-const underDev = true;
+const underDev = false;
 const api_url = underDev ? 'http://192.168.0.108:6750' : 'https://api.xet.one';
 let jwt_token = null;
 
