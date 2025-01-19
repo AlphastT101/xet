@@ -76,6 +76,7 @@ body::-webkit-scrollbar {display: none;}
     justify-content: space-between;
     align-items: center;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     position: fixed;
     width: 100%;
     top: 0;
@@ -205,15 +206,14 @@ body::-webkit-scrollbar {display: none;}
 
 .XET {
     display: inline-block;
-    background: linear-gradient(to right, #cccbe0, #df95ff);
+    background: linear-gradient(to right, #ffffff, #df95ff);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 2.9rem;
+    font-size: 2.5rem;
     font-weight: bold;
-    text-align: left;
+    text-align: center;
     width: auto;
-    max-width: 450px;
 }
 .home-desc {
     font-size: 1.1rem;
@@ -273,7 +273,7 @@ body::-webkit-scrollbar {display: none;}
     .btn{flex-direction: column; width: 100%;}
     .play-btn{margin: 15px; width: 90%;}
     .discord-btn{width: 90%;}
-    .XET{font-size: 2.4rem; text-align: center;}
+    .XET{font-size: 1.7rem;}
     .home{margin-top: 25px;}
 }
 .discord-btn:hover, .play-btn:hover {
@@ -603,10 +603,8 @@ body::-webkit-scrollbar {display: none;}
     flex-direction: row;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 20px;
     padding: 40px;
 
-    background: rgb(19 18 33 / 50%);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
