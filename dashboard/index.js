@@ -1,5 +1,5 @@
-const underDev = false;
-const api_url = underDev ? 'http://192.168.0.108:6750' : 'https://api.xet.one';
+const underDev = true;
+const api_url = underDev ? 'http://192.168.0.101:6750' : 'https://api.xet.one';
 let jwt_token = null;
 
 function getCookie(name) {
@@ -113,12 +113,14 @@ async function showChart() {
 
 
 
-let account_token = null; // Ensure variable is declared properly
+let account_token = null;
 const generateButton = document.querySelector('.token-generate');
-console.log(generateButton);
 
 async function generateToken() {
-    const generateButton = document.querySelector('.token-generate');
+
+    generateButton.disabled = true;
+    generateButton.textContent = "Please wait...";
+
     try {
         const response = await fetch(`${api_url}/v1/account/generate-token`, {
             method: 'POST',
@@ -131,7 +133,6 @@ async function generateToken() {
             console.log("Response data:", data);
             account_token = data.token;
 
-            // Show modal and update content
             const modal = document.getElementById('modal');
             modal.classList.add('show');
             document.querySelector('.floating_api_token').textContent = data.token;
@@ -143,6 +144,10 @@ async function generateToken() {
             window.location.href = `${root_domain}/login`;
         }
     } catch (error) {
+
+        generateButton.disabled = false;
+        generateButton.textContent = "Generate API Token";
+
         console.error("Fetch error:", error);
         alert(`An error occurred. Please try clearing the cookies. Error: ${error}`);
     }
@@ -158,7 +163,6 @@ async function deleteToken() {
         });
 
         if (response.ok) {
-            // Render tokens
             account_token = null;
             render_api_tokens();
         } else {
@@ -172,8 +176,9 @@ async function deleteToken() {
 }
 
 async function render_api_tokens() {
-    const button = document.querySelector('.token-generate');
-    button.disabled = true; // Disable the button at the start
+    generateButton.disabled = true;
+    generateButton.textContent = "Please wait...";
+
     try {
         const response = await fetch(`${api_url}/v1/account/tokens`, {
             method: 'POST',
@@ -184,11 +189,14 @@ async function render_api_tokens() {
         if (response.ok) {
             const data = await response.json();
             if (data.token === null) {
-                button.disabled = false
+                generateButton.disabled = false
                 document.querySelector('.no-tokens').style.display = 'inline';
                 document.querySelector('.token-1').style.display = 'none';
                 document.querySelector('.no-tokens').textContent = "Looks like you don't have any API tokens generated.";
+                generateButton.textContent = "Generate API Token";
             } else {
+
+                generateButton.textContent = "Generate API Token";
                 account_token = data.token
                 document.querySelector('.no-tokens').style.display = 'none';
                 const hidden_token = data.token.slice(0, 20) + "*****";
@@ -203,6 +211,6 @@ async function render_api_tokens() {
     } catch (error) {
         console.error('Error:', error);
         alert(`An error occurred. Please try clearing the cookies. Error: ${error}`);
-        button.disabled = false;
+        generateButton.textContent = "Error Occured";
     }
 }

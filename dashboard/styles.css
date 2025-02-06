@@ -11,15 +11,27 @@ body {
 }
 
 
+:root {
+    --scrollbar-track-color: #000000;
+    --scrollbar-thumb-color: #1f1f1f;
+    --scrollbar-thumb-hover-color: #3b3b3b;
+}
+
+::-webkit-scrollbar {width: 12px;}
+::-webkit-scrollbar-track {background: var(--scrollbar-track-color);}
+::-webkit-scrollbar-thumb {background: var(--scrollbar-thumb-color); border-radius: 6px;}
+::-webkit-scrollbar-thumb:hover {background: var(--scrollbar-thumb-hover-color);}
+* {scrollbar-width: thin; scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);}
+
 
 
 /* Sidebar Styles */
 .sidebar {
-    background-color: #080812;
+    background-color: #000000;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
-    border-right: 1px solid #2f2f2f;
+    border-right: 1px solid #1e1e1e;
 
     /* Fix the sidebar*/
     position: fixed;
@@ -35,13 +47,12 @@ body {
 
 .sidebar-header {
     color: white;
-    background-color: #080812;
+    background-color: #000000;
     text-align: center;
     display: flex;
     align-items: center; /* Vertically center the items */
     justify-content: center;
     height: 60px;
-    /* border-bottom: 1px solid #2f2f2f; */
 }
 
 .sidebar-menu li a.active {
@@ -110,7 +121,7 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    background-color: #070018;
+    background-color: #000000;
     margin-left: 58px;
 }
 
@@ -119,20 +130,25 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #080812;
+    background: #000000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     height: 30px;
     padding: 15px;
-    border-bottom: 1px solid #2f2f2f;
+    border-bottom: 1px solid #1e1e1e;
 }
 .mobile-navbar {
     color: rgb(126, 126, 126);
-    background: #080812;
+    background: #000000;
     padding: 15px 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     height: 30px;
-    border-bottom: 1px solid #2f2f2f;
+    border-bottom: 1px solid #1e1e1e;
     display: none;
+}
+
+.mobile-sidebar-menu li a.active {
+    font-weight: bold;
+    color: white;
 }
 
 .mobile-sidebar-menu {
@@ -165,19 +181,21 @@ body {
     margin-right: 10px;
 }
 
+
+
 /* Content Section */
 .notif {
     padding: 5px 10px;
     border-radius: 10px;
     margin: 5px;
-    background-color: #12164f;
-    border-left: 10px solid #ffffff; /* Adjust the width and color as needed */
+    border-left: 10px solid #373737;
     width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: left;
     align-items: center;
     gap: 7px;
+    background-color: #121212;
 }
 
 .content{
@@ -215,7 +233,7 @@ body {
     gap: 5px;
 }
 .token-generate, .token-delete, .token-view{
-    background-color: #28a745;
+    background-color: #2b2b2b;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -225,10 +243,10 @@ body {
     transition: background-color 0.3s;
 }
 .token-generate:hover {
-    background-color: #218838;
+    background-color: #494949;
 }
 .token-generate:disabled {
-    background-color: #50854b;
+    background-color: #1f1f1f;
     cursor: not-allowed;
     opacity: 0.7;
 }
@@ -241,23 +259,24 @@ body {
 .token-1{
     display: flex;
     flex-direction: row;
-    background-color: #12164f;
     border-radius: 15px;
     margin: 5px;
     padding: 10px;
     width: 80%;
+    border: 1px solid #2e2e2e;
 }
 @media(max-width: 500px){
     .token-1{flex-direction: column;}
 }
 
-.token-delete{background-color: red;}
+.token-delete{background-color: #7d0000;}
 .token-delete:hover{background-color: rgb(196, 2, 2);}
-.token-view:hover{background-color: #196429;}
+.token-view:hover{background-color: #4b4b4b;}
 
 
 
-/* Modal container with fade effect */
+
+
 .modal {
     visibility: hidden;
     position: fixed;
@@ -265,7 +284,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent backdrop */
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
     opacity: 0;
     transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -276,16 +295,15 @@ body {
     opacity: 1; /* Fade in */
 }
 
-
 .modal-content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #121c39;
+    background-color: #141414;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 5px 20px rgb(0 0 0);
+    box-shadow: 0 5px 20px rgb(119 119 119);
     width: auto;
     max-width: 400px;
     max-width: 90%;
@@ -307,8 +325,19 @@ body {
 }
 
 pre{
-    background-color: black;
-    border-radius: 20px;
-    width: 70%;
-    justify-content: left;
+    background-color: black !important;
+    overflow: scroll !important;
+    width: 511px;
+}
+
+@media(max-width:600px){
+    pre{width: 330px;}
+}
+
+@media(max-width:413px){
+    pre{width: 300px;}
+}
+
+@media(max-width:383px){
+    pre{width: 230px;}
 }

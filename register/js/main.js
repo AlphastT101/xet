@@ -2,15 +2,17 @@
 	"use strict";
 })(jQuery);
 
-const underDev = false;
-const api_url = underDev ? "http://192.168.0.108:6750" : "https://api.xet.one";
+const underDev = true;
+const api_url = underDev ? "http://192.168.0.101:6750" : "https://api.xet.one";
 email_main = null;
 
 
 document.querySelector('.signup-form').addEventListener('submit', async (event) => {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault();
+
     const signupButton = document.getElementById("signup_button");
     signupButton.disabled = true;
+    signupButton.textContent = "Signin up...";
 
     const email = document.querySelector('input[placeholder="Email"]').value;
     const password = document.querySelector('input[placeholder="Password"]').value;
@@ -32,17 +34,26 @@ document.querySelector('.signup-form').addEventListener('submit', async (event) 
         if (response.ok) {
             document.querySelector('.signup-form').style.display = 'none';
             document.querySelector('.verification-form').style.display = 'inline';
+
         } else {
             const errorData = await response.json();
             console.error('Login failed:', errorData.error);
+
             const errorLabel = document.querySelector('.error-msg');
             errorLabel.style.display = 'inline';
             errorLabel.textContent = errorData.error;
             signupButton.disabled = false;
+            signupButton.textContent = "Sign up";
         }
     } catch (error) {
         console.error('Error:', error);
-        alert('An error occurred. Please try again later.');
+
+        const errorLabel = document.querySelector('.error-msg');
+        errorLabel.style.display = 'inline';
+        errorLabel.textContent = error;
+
+        signupButton.disabled = false;
+        signupButton.textContent = "Sign up";
     }
 });
 
@@ -50,7 +61,9 @@ document.querySelector('.verification-form').addEventListener('submit', async (e
     event.preventDefault();
     const code = document.querySelector('input[placeholder="Verification code"]').value;
     const check = document.getElementById("check");
+
     check.disabled = true;
+    check.textContent = "Please wait...";
 
     const payload = {
         email: email_main,
@@ -67,13 +80,12 @@ document.querySelector('.verification-form').addEventListener('submit', async (e
         });
 
         if (response.ok) {
-            // alert("200")
             const data = await response.json();
             const root_domain = `${window.location.protocol}//${window.location.hostname}:${window.location.port}`;
             const dash_url = `${root_domain}/dashboard`;
             const dashboardUrl = `${dash_url}?token=${data.access_token}&expiration=${encodeURIComponent(data.exp)}`;
-            // console.log(dashboardUrl)
             window.location.href = dashboardUrl;
+
         } else {
             const errorData = await response.json();
             console.error('Login failed:', errorData.detail);
@@ -81,10 +93,18 @@ document.querySelector('.verification-form').addEventListener('submit', async (e
             errorLabel.style.display = 'inline';
             errorLabel.textContent = errorData.detail;
             check.disabled = false;
+            check.textContent = "Check";
         }
+
     } catch (error) {
         console.error('Error:', error);
-        alert('An error occurred. Please try again later.');
+
+        console.error('Login failed:', errorData.detail);
+        const errorLabel = document.querySelector('.verify-error');
+        errorLabel.style.display = 'inline';
+        errorLabel.textContent = error;
+        check.disabled = false;
+        check.textContent = "Check";
     }
 })
 
