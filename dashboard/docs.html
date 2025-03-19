@@ -61,7 +61,7 @@
 
                 <h2>Image Generaion</h2>
 
-                <p style="margin-bottom: -10px;">Ratelimit: 100 per minute.</p>
+                <p style="margin-bottom: -10px;">Ratelimit: 5 per minute.</p>
                 <p style="margin-bottom: -10px;">Everything else is unlimited.</p>
                 <p style="margin-bottom: 0px;">Current available models:</p>
                 <ul style="line-height: 25px;">
@@ -89,7 +89,7 @@ openai = OpenAI(
 )
 response = openai.images.generate(
     prompt="A sunset over a mountain range",
-    model="flux-dev",
+    model="sdxl-lighting",
     size="1024x1024"
 )
 print(response.data[0].url)
@@ -98,30 +98,34 @@ print(response.data[0].url)
 
                 <h2>Text Generation</h2>
 
-                <p style="margin-bottom: -10px;">Ratelimit: 15 per minute.</p>
-                <p style="margin-bottom: -10px;">You can only have 1900 characters in the message history, everything else is unlimited.</p>
-                <p style="margin-bottom: 0px;">Current available models(NEW!):</p>
+                <p style="margin-bottom: -10px;">Ratelimit: 5 per minute.</p>
+                <p style="margin-bottom: -10px;">You can only have 1900 characters in the message history, everything else is unlimited. But we recommend to use an alternative provider since text generation in our API is facing some stability issues. Image generation is fine though.</p>
+                <p style="margin-bottom: 0px;">Current available models:</p>
                 <ul style="line-height: 25px;">
                     <li>llama-3.3-70b-turbo</li>
                     <li>phi-4</li>
                     <li>deepseek-v3</li>
                     <li>deepseek-r1</li>
                     <li>deepseek-r1-llama-3.3-70b-distill</li>
+                    <li>deepseek-r1-qwen-32b-distill</li>
                     <li>lunaris-l3-8b</li>
                     <li>wazardlm-2-8x22b</li>
                     <li>mythomax-13b</li>
                     <li>mistral-nemo</li>
-                    <li>gemini-1.5-flash</li>
-                    <li>gemini-1.5-pro</li>
+                    <li>mistral-small-24b</li>
+                    <li>gemini-2-flash</li>
                     <li>gemma-2-27b</li>
                     <li>gemma-2-9b-turbo</li>
+                    <li>gemma-3-27b</li>
+                    <li>gemini-2-flash-lite</li>
                     <li>llama-3-70b-instruct</li>
-                    <li>llama-3.1-70b</li>
-                    <li>llama-3.1-70b-instruct</li>
-                    <li>llama-3.1-8b-turbo</li>
                     <li>llama-3.3-70b</li>
+                    <li>llama-3.1-70b</li>
+                    <li>llama-3.1-8b-turbo</li>
+                    <li>llama-3.1-70b-turbo</li>
                     <li>qwen-2.5-coder-32b</li>
                     <li>qwq-32b</li>
+                    <li>gpt-4o</li>
                 </ul>
                 <h3>Python code example</h3>
                 <pre><code class="language-python">
