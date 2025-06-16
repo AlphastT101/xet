@@ -8,28 +8,36 @@
     <link rel="icon" type="image/png" href="/images/logo.png">
     <meta name="description" content="Discover free AI APIs for text generation, image creation, and more at XET. Fast, reliable, and optimized for security and performance.">
 
-    <link rel="stylesheet" href="/css/loader.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo:wght@400;700&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&display=swap">
 
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-duotone-solid.css">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-thin.css">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-solid.css">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css">
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css">
+    <!-- Preconnect to critical CDNs -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://site-assets.fontawesome.com">
+    <link rel="preconnect" href="https://unpkg.com">
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Main styles (local) -->
+    <link rel="preload" href="/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/styles.css"></noscript>
+
+    <!-- Google Fonts (combined into one request) -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Exo:wght@400;700&family=Inter:wght@400;500;600;700&family=Anton&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Exo:wght@400;700&family=Inter:wght@400;500;600;700&family=Anton&display=swap"></noscript>
+
+    <!-- FontAwesome -->
+    <link rel="preload" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"></noscript>
+
+    <!-- AOS -->
+    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
+
 </head>
 <body>
 
     <!-- MOBILE NAVBAR START -->
     <nav class="navbar_">
         <div class="navmain_">
-            <button class="more-button_"><i class="fa-solid fa-square-caret-down"></i></button>
+            <button class="more-button_" aria-label="more"><i class="fa-solid fa-square-caret-down"></i></button>
             <div class="navlinks_">
                 <ul class="navbar-links_">
                     <p><a href="https://github.com/AlphastT101/luminaryai/blob/main/docs.md">Docs</a></p>
@@ -40,8 +48,8 @@
             </div>
 
             <div class="navbar-brand_">
-                <img src="/images/logo.png" alt="XET" class="nav-logo_">
-                <a class="XET" style="font-size: 20px;">LumixCore</a>
+                <img src="/images/logo.png" alt="XET" class="nav-logo_" height="25" width="25" style="margin-right: 10px;">
+                <a class="XET" style="font-size: 20px;">XET</a>
             </div>
         </div>
     </nav>
@@ -53,8 +61,8 @@
     <nav class="navbar">
         <div class="navmain">
             <div class="navbar-brand">
-                <img src="/images/logo.png" alt="XET" class="nav-logo">
-                <a href="#home" class="XET" style="font-size: 20px;">LumixCore</a>
+                <img src="/images/logo.png" alt="XET" class="nav-logo" height="20" width="20">
+                <a href="#home" class="XET">XET</a>
             </div>
             <ul class="navbar-links">
                 <li><a href="https://github.com/AlphastT101/luminaryai/blob/main/docs.md"> Docs</a></li>
@@ -66,17 +74,18 @@
     </nav> <!-- PC NAVBAR END -->
     
 
+
     <div class="home" id="home">
 
         <div class="home-main">
             <div class="home-content">
-                <img src="/images/pattern.png" class="bg-pattern" alt="Background Pattern">
+                <img src="/images/pattern.png" class="bg-pattern" alt="Background Pattern" loading="eager" decoding="async" fetchpriority="high">
                 <p class="non-commercial">Non-commercial use</p>
                 <h1><a class="home-title">Clear & straightforward<br>
                     <span class="gradient-text">Open source AI project</span>
                 </a></h1>
 
-                <h2 class="home-desc">LumixCore with Advanced AI APIs, Reliable Image Hosting and much more. Built for security, optimized for speed.</h2>
+                <h2 class="home-desc">XET with Advanced AI APIs, Reliable Image Hosting and much more. Built for security, optimized for speed.</h2>
 
                 <div class="btn">
                     <a href="/register/" class="discord-btn" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-stars"></i> Try For Free</a>
@@ -84,7 +93,7 @@
                 </div>
 
             </div>
-            <img src="/images/tablet.png" class="tablet" alt="Tablet">
+            <img src="/images/tablet.png" class="tablet" alt="Tablet" width="100%" height="auto">
         </div>
 
         <div class="home-models">
@@ -104,22 +113,24 @@
 
     </div>
 
+
+
     <div class="features" id="features">
         <div class="f">
             <div class="feature-item">
-                <img src="images/features_icons/textgen.png" id="features_icons">
+                <img src="images/features_icons/textgen.png" id="features_icons" alt="features_icons" height="60" width="60">
                 <h3 data-aos="fade" data-aos-duration="2000">Text & Image Generation</h3>
                 <p data-aos="fade" data-aos-duration="2000">Create both text and images using AI models like DeepSeek and SDXL-Turbo—all through one simple platform.</p>
             </div>
 
             <div class="feature-item">
-                <img src="images/features_icons/imagen.png" id="features_icons">
+                <img src="images/features_icons/imagen.png" id="features_icons" alt="features_icons" height="60" width="60">
                 <h3 data-aos="fade" data-aos-duration="2000">Dashboard & Playground</h3>
                 <p data-aos="fade" data-aos-duration="2000">Experiment with API tools in our interactive playground or manage projects via the clean dashboard.</p>
             </div>
 
             <div class="feature-item">
-                <img src="images/features_icons/support.png" id="features_icons">
+                <img src="images/features_icons/support.png" id="features_icons" alt="features_icons" height="60" width="60">
                 <h3 data-aos="fade" data-aos-duration="2000">Simplicity & Performance</h3>
                 <p data-aos="fade" data-aos-duration="2000">Lightweight design with high-speed responses—optimized for both ease of use and power users.</p>
             </div>
@@ -129,11 +140,11 @@
 
     <div class="footer">
 
-        <img src="/images/footerbgtop.png" class="footer-bg-top">
+        <img src="/images/footerbgtop.png" class="footer-bg-top" alt="footer-bg">
 
         <div class="footer-top">
             <div class="footer-top-text">
-                <div class="footer-top-header">We welcome you to try our API.</div>
+                <div class="footer-top-header">We welcome you to try our project.</div>
                 <div class="footer-top-desc">Experience our API and explore its powerful features to enhance your projects. Comprehensive docs and support are here to help</div>
             </div>
             <!-- <div class="join-now">
