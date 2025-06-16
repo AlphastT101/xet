@@ -1,7 +1,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://xet.one</loc>
-    <lastmod>2025-06-16</lastmod>
-    <priority>1.00</priority>
-  </url>
+  <url><loc>https://xet.one/</loc></url>
+  <url><loc>https://xet.one/login/</loc></url>
+  <url><loc>https://xet.one/register/</loc></url>
+
+  <url><loc>https://xet.one/dashboard/</loc></url>
+  <url><loc>https://xet.one/dashboard/tokens</loc></url>
+  <url><loc>https://xet.one/dashboard/analytics</loc></url>
+  <url><loc>https://xet.one/dashboard/playground</loc></url>
 </urlset>
