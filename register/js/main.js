@@ -3,7 +3,7 @@
 })(jQuery);
 
 const underDev = false;
-const api_url = underDev ? "http://192.168.0.101:6750" : "https://api.xet.one";
+const api_url = underDev ? "http://192.168.0.101:6750" : "https://api.lumixcore.one";
 email_main = null;
 
 
