@@ -188,7 +188,7 @@ body {
     padding: 5px 10px;
     border-radius: 10px;
     margin: 5px;
-    border-left: 10px solid #ff0000;
+    border-left: 10px solid #00682d;
     width: 90%;
     display: flex;
     flex-direction: row;
@@ -202,6 +202,27 @@ body {
     padding: 20px;
     display: flex;
     flex-direction: column;
+}
+
+.link_btn{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+@media (max-width:350px) {
+    .link_btn{flex-direction: column;}
+}
+.play_btn, .docs_btn{
+    background-color: #1f1f34;
+    border-radius: 10px;
+    margin: 4px;
+
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .analytics-content {
