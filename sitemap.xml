@@ -1,10 +1,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://xet.one/</loc></url>
-  <url><loc>https://xet.one/login/</loc></url>
-  <url><loc>https://xet.one/register/</loc></url>
+  <url><loc>https://lumixcore.com/</loc></url>
+  <url><loc>https://lumixcore.com/login/</loc></url>
+  <url><loc>https://lumixcore.com/register/</loc></url>
 
-  <url><loc>https://xet.one/dashboard/</loc></url>
-  <url><loc>https://xet.one/dashboard/tokens</loc></url>
-  <url><loc>https://xet.one/dashboard/analytics</loc></url>
-  <url><loc>https://xet.one/dashboard/playground</loc></url>
+  <url><loc>https://lumixcore.com/dashboard/</loc></url>
+  <url><loc>https://lumixcore.com/dashboard/tokens</loc></url>
+  <url><loc>https://lumixcore.com/dashboard/analytics</loc></url>
 </urlset>
